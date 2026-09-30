@@ -233,6 +233,8 @@ All tokens live in `:root` in `src/app/globals.css`. They carry over from the Wo
 | `--bg-warm` | `#f7f5f2` | Mega-menu shell (the warm grey Glean uses) |
 | `--border` / `--border-light` | `#e2e8f0` / `#f1f5f9` | Dividers |
 
+Mono accent: **JetBrains Mono** (`--font-mono`), only for overlines, mockup chrome and data tables.
+
 Typeface: **Manrope** through `next/font/google` (latin, latin-ext, vietnamese), exposed as `--font-sans`. It is the aurion.technology font. **Lam chose it over the template's Be Vietnam Pro, and it overrides the Typography rule above.**
 
 Buttons use `--radius-button` (10px), the same as WordPress. Pills (the dock, hero feature pills, overlines) stay fully round.
@@ -246,7 +248,14 @@ The Landing Pages table above is written as max-width. In code we write it mobil
 - **Vietnamese is the default.** `/` redirects to `/vi` in `src/proxy.ts`. Browser language is ignored on purpose.
 - Every route lives under `src/app/[lang]/`. There is no runtime text swapping and no inline fallback copy (the WordPress site's three-source problem is gone).
 - **UI copy** (nav, menu, home sections, footer) lives in `src/dictionaries/vi.json` and `en.json`. `en.json` is type-checked against `vi.json`, so a missing key fails the build.
-- **Page content** lives in `src/content/pages/*.ts`, with `vi` and `en` side by side in one object. Add a page by registering it in `src/content/pages/index.ts`, and the catch-all route `src/app/[lang]/[...slug]` publishes it. Pages are made of typed blocks (`features`, `metrics`, `steps`, `links`, `notice`) rendered by `src/components/page/Blocks.tsx`.
+- **Page content** lives in `src/content/pages/*.ts`, with `vi` and `en` side by side in one object. Add a page by registering it in `src/content/pages/index.ts`, and the catch-all route `src/app/[lang]/[...slug]` publishes it. Pages are made of typed blocks rendered by `src/components/page/Blocks.tsx`:
+  - `grid`: a sticky heading beside a joined card grid
+  - `split`: text beside a mockup; `reverse` flips the sides
+  - `stats`: the dark number band
+  - `steps`, `links`, `logos` and `notice`
+- Features carry a `status`: `live` (running at a hospital, shown with a green pulsing badge) or `available` (Aurion can build it on request). **Never mark something `live` unless Lam has confirmed it.**
+- Mockups live in `src/components/visuals/` and are referenced by name (`visual: "calendar"`). Each has its own `vi` / `en` copy object. Add new ones to the registry in `Visual.tsx`.
+- Page layout follows Glean: hairline rails at the container edges (`.rails` on `<main>`), monospace overlines (JetBrains Mono, `--font-mono`) with a square marker, hairlines between sections, and no alternating grey backgrounds.
 - Change a string in both languages in the same commit.
 - Internal links go through `localHref(lang, "/path")` from `src/lib/href.ts`.
 
