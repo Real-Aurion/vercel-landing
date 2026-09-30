@@ -1,0 +1,181 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+
+.bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  height: var(--nav-height);
+  padding: 0 var(--gutter);
+  border-bottom: 1px solid var(--border-light);
+}
+
+
+/* The blur lives on a pseudo-element because backdrop-filter on .bar itself would trap the fixed mobile drawer inside the 72px bar. */
+.bar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+
+.brand img {
+  width: auto;
+  height: 28px;
+}
+
+
+.triggers {
+  display: none;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+
+.trigger:hover,
+.trigger[aria-expanded="true"] {
+  color: var(--text);
+}
+
+
+.chevron {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.4s ease;
+}
+
+
+.trigger[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+
+.cta {
+  display: none;
+}
+
+
+.panelWrap {
+  position: absolute;
+  top: calc(var(--nav-height) + 8px);
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+  max-width: calc(var(--max-width) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity var(--transition), transform 0.4s ease;
+}
+
+
+.panelWrap[data-open="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+
+/* Bridges the 8px gap under the bar so moving the pointer down into the panel never counts as leaving it. */
+.panelWrap::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 0;
+  left: 0;
+  height: 8px;
+}
+
+
+.scrim {
+  position: fixed;
+  inset: var(--nav-height) 0 0;
+  z-index: 1;
+  background: var(--scrim);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+
+.scrim[data-open="true"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+@media (min-width: 1025px) {
+  .triggers,
+  .cta,
+  .panelWrap {
+    display: flex;
+  }
+
+  .panelWrap {
+    display: block;
+    pointer-events: none;
+  }
+
+  .panelWrap[data-open="true"] {
+    pointer-events: auto;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .scrim {
+    display: none;
+  }
+}

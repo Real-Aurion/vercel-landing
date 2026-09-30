@@ -1,0 +1,124 @@
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+
+
+.tab:hover {
+  color: var(--text);
+}
+
+
+.tab[aria-selected="true"] {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+}
+
+
+.tabIcon {
+  width: 18px;
+  height: 18px;
+}
+
+
+.panel {
+  display: grid;
+  gap: 40px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+
+.subtitle {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+
+.title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+
+.description {
+  margin-top: 16px;
+  color: var(--text-secondary);
+}
+
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+}
+
+
+.metricWide {
+  grid-column: 1 / -1;
+}
+
+
+.metricValue {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--accent);
+}
+
+
+.metricLabel {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+
+@media (min-width: 1025px) {
+  .panel {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    padding: 48px;
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "title": "Aurion — Healthcare Intelligence",
+    "description": "Aurion is building Asia-Pacific clinical intelligence infrastructure, transforming raw medical data into continuously learning AI engines."
+  },
+  "nav": {
+    "product": "Product",
+    "solutions": "Solutions",
+    "customers": "Customers",
+    "resources": "Resources",
+    "company": "Company",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageLabel": "Select language",
+    "comingSoon": "Coming soon"
+  },
+  "menu": {
+    "overview": { "title": "Platform overview", "desc": "See how Aurion works." },
+    "foundationLabel": "Built for clinical AI.",
+    "clinicalContext": { "title": "Aurion Clinical Context" },
+    "connectors": { "title": "HIS · LIS · PACS · EHR connectors" },
+    "dataPlatform": { "title": "Clinical data repository (CDR)" },
+    "deidentification": { "title": "Data de-identification" },
+    "protect": { "title": "Aurion Protect" },
+    "intelligence": { "title": "Aurion Intelligence" },
+    "modelHub": { "title": "Model hub" },
+    "ocrEngine": { "title": "Medical OCR" },
+    "usageControls": { "title": "Usage controls" },
+    "assistant": { "title": "Aurion Assistant", "desc": "Your clinical AI coworker" },
+    "knowledgeSearch": { "title": "Medical knowledge search" },
+    "guidelineQa": { "title": "Guideline Q&A" },
+    "documentDrafting": { "title": "Clinical documentation" },
+    "labExtraction": { "title": "Lab result extraction" },
+    "operations": { "title": "Aurion Operations", "desc": "Automate hospital workflows" },
+    "surgerySchedule": { "title": "Surgery scheduling" },
+    "patientFlow": { "title": "Patient flow" },
+    "labAutomation": { "title": "Lab automation" },
+    "researchPipelines": { "title": "Research data pipelines" },
+    "insights": { "title": "Aurion Insights", "desc": "See where AI can make the biggest impact" },
+    "hospitals": { "title": "Hospitals / clinics", "desc": "Direct patient care & management" },
+    "labs": { "title": "Pathology / testing labs", "desc": "High-volume sample analysis" },
+    "research": { "title": "Research facilities", "desc": "Scientific discovery & enhancement" },
+    "nhidong1": { "title": "Nhi Dong 1 Hospital", "desc": "Deployment story" },
+    "nd115": { "title": "People's Hospital 115", "desc": "Deployment story" },
+    "allCustomers": { "title": "All customers", "desc": "Institutions that trust Aurion" },
+    "blog": { "title": "Blog", "desc": "Perspectives on AI in healthcare" },
+    "faq": { "title": "FAQ", "desc": "Common questions" },
+    "security": { "title": "Security & compliance", "desc": "How we protect your data" },
+    "about": { "title": "About Aurion", "desc": "Our mission and story" },
+    "values": { "title": "Values", "desc": "What guides us" },
+    "careers": { "title": "Careers", "desc": "Help build Aurion" },
+    "contactUs": { "title": "Contact", "desc": "Talk to the team" }
+  },
+  "hero": {
+    "eyebrow": "Healthcare Intelligence",
+    "headingPre": "Where ",
+    "headingAccent1": "Data",
+    "headingMid": " Meets ",
+    "headingAccent2": "Medical",
+    "headingPost": " Discovery",
+    "lead": "Aurion is building Asia-Pacific clinical intelligence infrastructure, transforming raw medical data into continuously learning AI engines that improve hospital operational efficiency, lab throughput, and research outcomes.",
+    "cta": "See How It Works",
+    "ctaSecondary": "Contact Us",
+    "feature1": { "title": "Research", "desc": "OCR & Machine Learning" },
+    "feature2": { "title": "Operation", "desc": "AI Training & Automation" }
+  },
+  "customers": {
+    "label": "Trusted Partners",
+    "heading": "Trusted by leading healthcare institutions",
+    "nhidong1": "Nhi Dong 1 Hospital",
+    "nd115": "People's Hospital 115"
+  },
+  "impact": {
+    "heading": "What We Do",
+    "pathology": {
+      "title": "Pathology/ Testing Labs",
+      "subtitle": "High-Volume Sample Analysis",
+      "description": "Boosting lab throughput by automating data extraction, reducing manual steps, and improving sample-to-report efficiency.",
+      "stat1": "Faster Sample Processing",
+      "stat2": "Data Extraction Accuracy",
+      "stat3": "Automated end-to-end lab reporting pipeline"
+    },
+    "hospital": {
+      "title": "Hospital/ Clinics",
+      "subtitle": "Direct Patient Care & Management",
+      "description": "Enhancing patient flow, staff efficiency, and care coordination through AI clinical reasoning and workflow automation.",
+      "stat1": "Less Administrative Work",
+      "stat2": "Patient Throughput",
+      "stat3": "AI-assisted clinical reasoning & workflow automation"
+    },
+    "research": {
+      "title": "Research Facilities",
+      "subtitle": "Scientific Discovery & Enhancement",
+      "description": "Accelerating scientific discovery with structured datasets, ML-powered insights, and automated research preparation.",
+      "stat1": "Faster Dataset Preparation",
+      "stat2": "Powered Insights Engine",
+      "stat3": "Structured data pipelines for clinical research"
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Common questions about our solutions",
+    "items": [
+      {
+        "question": "How long does implementation typically take?",
+        "answer": "Implementation timelines vary by project scope. Most integrations are completed in 8-12 weeks, with phased rollouts for larger organizations. We work closely with your team to minimize disruption."
+      },
+      {
+        "question": "Is your platform HIPAA compliant?",
+        "answer": "Yes, all Aurion solutions are built with HIPAA compliance at their core. We provide Business Associate Agreements (BAA) and maintain comprehensive security audits and certifications."
+      },
+      {
+        "question": "Can you integrate with our existing EHR system?",
+        "answer": "We support integrations with leading EHR platforms like Epic and Cerner through tailored connectors. For other systems, we evaluate compatibility during discovery and map a clear integration plan together."
+      },
+      {
+        "question": "What kind of support do you provide?",
+        "answer": "We provide dedicated launch support, scheduled check-ins, and rapid responses during business hours, with on-call escalation for critical issues."
+      },
+      {
+        "question": "How do you ensure data security?",
+        "answer": "We employ end-to-end encryption, role-based access controls, regular security audits, and maintain SOC 2 Type II certification. All data is stored in HIPAA-compliant data centers."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Let's Transform Healthcare Together",
+    "copy": "Bring your most complex integrations to Aurion. We will architect the future-ready foundation your teams have been waiting for.",
+    "cta": "Contact Us"
+  },
+  "footer": {
+    "tagline": "Empowering Healthcare Through Intelligent Technology",
+    "rights": "Aurion. All rights reserved.",
+    "location": "Ho Chi Minh City, Vietnam",
+    "company": "Company",
+    "contact": "Get in Touch"
+  }
+}
