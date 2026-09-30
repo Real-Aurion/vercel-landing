@@ -3,7 +3,8 @@ import { locales, type Locale } from "@/dictionaries";
 import { CONTACT_EMAIL } from "./contact";
 
 
-export const SITE_URL = "https://aurion.technology";
+// Vercel serves the site on www and 308-redirects the bare domain to it, so canonicals and the sitemap use www too.
+export const SITE_URL = "https://www.aurion.technology";
 
 
 // Canonical URL plus hreflang pairs, so Google shows the Vietnamese page to Vietnamese searchers and the English one to others.

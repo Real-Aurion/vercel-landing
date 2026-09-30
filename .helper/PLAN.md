@@ -34,7 +34,8 @@
 
 ## Phase 6: Launch
 - [x] SEO: canonical + hreflang, sitemap, robots, Organization JSON-LD, redirects for old WordPress URLs
-- [ ] Point aurion.technology at Vercel and submit the sitemap in Google Search Console
+- [x] aurion.technology pointed at Vercel (served on www)
+- [ ] Submit the sitemap in Google Search Console
 - [ ] Publish approved case studies (`src/content/visibility.ts`)
 - [ ] Scroll reveals and polish pass, Lighthouse ≥ 95
 - [ ] Move aurion.health to Vercel, redirect the old WordPress URLs (`/team/` → `/vi/about#values`)

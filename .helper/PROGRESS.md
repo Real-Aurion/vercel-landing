@@ -3,7 +3,7 @@
 The new marketing site for Aurion, a healthcare-tech company (founded 2025, Ho Chi Minh City) building clinical intelligence infrastructure. It replaces the WordPress theme (`~/projects/Aurion/landing_page_wp`) with a multi-page site modelled on glean.com. Bilingual, Vietnamese by default.
 
 **Stack**: Next.js 16 (App Router) · React 19 · TypeScript · plain CSS Modules · pnpm · Vercel
-**Repo**: github.com/Real-Aurion/vercel-landing (private, default branch `vercel`) · **Live preview**: vercel-landing-gold.vercel.app · **Version**: 0.1.6
+**Repo**: github.com/Real-Aurion/vercel-landing (private, default branch `vercel`) · **Live preview**: vercel-landing-gold.vercel.app · **Version**: 0.1.7
 
 ## What's built
 
@@ -36,10 +36,10 @@ The new marketing site for Aurion, a healthcare-tech company (founded 2025, Ho C
 
 ## Launch / SEO (ready)
 
-- Target domain: **aurion.technology** (the WordPress site today). aurion.health is a separate "Aurion Health" site; leave it alone
+- **Live on www.aurion.technology since 2026-09-30.** Vercel 308-redirects aurion.technology to www, so `SITE_URL` uses www. DNS is at Cloudflare (nameservers), not Hostinger. The old WordPress A record was `82.180.152.22` (put it back to roll back). aurion.health is a separate "Aurion Health" site; leave it alone
 - `src/lib/seo.ts` holds `SITE_URL`, hreflang alternates and the Organization JSON-LD. `src/app/sitemap.ts` lists every public page in both languages. `robots.ts` allows everything except `/preview/`
 - Old WordPress URLs redirect permanently in `next.config.ts`: `/team` → `/vi/about#values`, `/hello-world` → `/vi`
-- To go live: add aurion.technology (and www) in Vercel → Domains, point DNS at Vercel, then submit `https://aurion.technology/sitemap.xml` in Google Search Console
+- Still to do: submit `https://www.aurion.technology/sitemap.xml` in Google Search Console. The `@` and `www` records are still on the orange cloud (Proxied); it works, but Vercel recommends DNS only. The DKIM records (`hostingermail-*._domainkey`) are also proxied and resolve to nothing, which hurts email deliverability; they should be DNS only
 
 ## Gotchas
 
