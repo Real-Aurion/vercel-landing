@@ -32,4 +32,4 @@ On a remote box (OpenClaw), expose the dev server with `pnpm dev --hostname 0.0.
 
 ## Deploy
 
-Import the repo in Vercel (framework preset: Next.js, no settings to change). Every push gets a preview URL; `main` deploys to production.
+Import the repo in Vercel (framework preset: Next.js, no settings to change). Every push gets a preview URL; `vercel` (the default branch) deploys to production.

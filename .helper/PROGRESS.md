@@ -3,7 +3,7 @@
 The new marketing site for Aurion, a healthcare-tech company building clinical intelligence infrastructure in Asia-Pacific. It replaces the one-page WordPress theme (`~/projects/Aurion/landing_page_wp`, live at aurion.health) and grows into a multi-page site modelled on glean.com. Bilingual, Vietnamese by default.
 
 **Stack**: Next.js 16 (App Router) · React 19 · TypeScript · plain CSS Modules · pnpm · Vercel
-**Repo**: github.com/Real-Aurion/vercel-landing (private) · **Version**: 0.1.0
+**Repo**: github.com/Real-Aurion/vercel-landing (private, default branch `vercel`) · **Version**: 0.1.1
 
 ## What's built
 
