@@ -4,6 +4,7 @@ import { Blocks } from "@/components/page/Blocks";
 import { PageHero } from "@/components/page/PageHero";
 import { ContactCta } from "@/components/sections/ContactCta";
 import { pages } from "@/content/pages";
+import { isPublished, previewTarget, unpublished } from "@/content/visibility";
 import { getDictionary, hasLocale, locales, type Locale } from "@/dictionaries";
 
 
@@ -11,13 +12,23 @@ export const dynamicParams = false;
 
 
 export function generateStaticParams() {
-  return locales.flatMap((lang) => Object.keys(pages).map((path) => ({ lang, slug: path.split("/") })));
+  const publicSlugs = Object.keys(pages).filter(isPublished).map((path) => path.split("/"));
+  const previewSlugs = Object.values(unpublished).map((code) => ["preview", code]);
+  return locales.flatMap((lang) => [...publicSlugs, ...previewSlugs].map((slug) => ({ lang, slug })));
+}
+
+
+function pathFor(slug: string[]): string | undefined {
+  if (slug[0] === "preview" && slug.length === 2) return previewTarget(slug[1]);
+  const path = slug.join("/");
+  return isPublished(path) ? path : undefined;
 }
 
 
 async function resolve(params: PageProps<"/[lang]/[...slug]">["params"]) {
   const { lang, slug } = await params;
-  const page = pages[slug.join("/")];
+  const path = pathFor(slug);
+  const page = path ? pages[path] : undefined;
   if (!hasLocale(lang) || !page) notFound();
   return { lang: lang as Locale, content: page[lang] };
 }

@@ -4,6 +4,7 @@ import { Icon } from "@/components/Icon";
 import { Partners } from "@/components/sections/Partners";
 import { Visual } from "@/components/visuals/Visual";
 import type { Block, Status } from "@/content/pages/types";
+import { isPublished } from "@/content/visibility";
 import type { Dictionary, Locale } from "@/dictionaries";
 import { localHref } from "@/lib/href";
 import styles from "./Blocks.module.css";
@@ -129,7 +130,7 @@ function Links({ block, lang }: { block: BlockOf<"links">; lang: Locale }) {
         <h2 className={styles.heading}>{block.heading}</h2>
       </div>
       <ul className={styles.linkGrid}>
-        {block.items.map((item) => (
+        {block.items.filter((item) => isPublished(item.href)).map((item) => (
           <li key={item.href}>
             <Link className={styles.linkCard} href={localHref(lang, item.href)}>
               <Icon name={item.icon} className={styles.cellIcon} />

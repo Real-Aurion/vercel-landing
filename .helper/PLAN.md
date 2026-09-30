@@ -33,5 +33,7 @@
 - [ ] SEO: per-page metadata, `hreflang` alternates, sitemap, Organization JSON-LD (the WordPress footer has one to port)
 
 ## Phase 6: Launch
+- [ ] Remove `robots: { index: false }` in `src/app/[lang]/layout.tsx` and allow crawling in `src/app/robots.ts`
+- [ ] Publish approved case studies (`src/content/visibility.ts`)
 - [ ] Scroll reveals and polish pass, Lighthouse ≥ 95
 - [ ] Move aurion.health to Vercel, redirect the old WordPress URLs (`/team/` → `/vi/about#values`)

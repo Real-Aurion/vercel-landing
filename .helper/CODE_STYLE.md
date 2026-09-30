@@ -256,6 +256,7 @@ The Landing Pages table above is written as max-width. In code we write it mobil
 - Mockups live in `src/components/visuals/` and are referenced by name (`visual: "calendar"`). Each has its own `vi` / `en` copy object. Add new ones to the registry in `Visual.tsx`.
 - Page layout follows Glean: hairline rails at the container edges (`.rails` on `<main>`), monospace overlines (JetBrains Mono, `--font-mono`) with a square marker, hairlines between sections, and no alternating grey backgrounds.
 - Change a string in both languages in the same commit.
+- A page can stay in code but off the site: list it in `src/content/visibility.ts`. It then returns 404, every link and menu item to it is filtered out, and it gets a private `/{lang}/preview/{code}` link. Always link to pages through `href`s that `isPublished()` can check. Don't hard-code links to hidden pages in copy.
 - Internal links go through `localHref(lang, "/path")` from `src/lib/href.ts`.
 
 ### Navigation / mega menu

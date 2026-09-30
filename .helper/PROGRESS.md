@@ -3,7 +3,7 @@
 The new marketing site for Aurion, a healthcare-tech company (founded 2025, Ho Chi Minh City) building clinical intelligence infrastructure. It replaces the WordPress theme (`~/projects/Aurion/landing_page_wp`) with a multi-page site modelled on glean.com. Bilingual, Vietnamese by default.
 
 **Stack**: Next.js 16 (App Router) · React 19 · TypeScript · plain CSS Modules · pnpm · Vercel
-**Repo**: github.com/Real-Aurion/vercel-landing (private, default branch `vercel`) · **Live preview**: vercel-landing-gold.vercel.app · **Version**: 0.1.4
+**Repo**: github.com/Real-Aurion/vercel-landing (private, default branch `vercel`) · **Live preview**: vercel-landing-gold.vercel.app · **Version**: 0.1.5
 
 ## What's built
 
@@ -23,6 +23,16 @@ The new marketing site for Aurion, a healthcare-tech company (founded 2025, Ho C
 - Founded 2025. **No founder names, no team section**
 - Contact and careers email: `shanlin@aurion.technology`. Careers mail uses the fixed subject `[Aurion Careers] CV`, so Lam can auto-forward it to HR
 - Metrics (3×, 98%, 40%, 2×, 5×) are confirmed real. No blog for now
+
+## Hidden pending hospital approval
+
+- `/customers`, `/customers/nhi-dong-1` and `/customers/115` return 404 publicly. Links and menu items to them are filtered out, so the "Đối tác / Customers" menu disappears while it's empty. The code and content stay as they are
+- Lam is asking each hospital. Share only their own private link (these work on any domain, in `vi` or `en`):
+  - Nhi Đồng 1: `/vi/preview/bkynhS52qZY`
+  - 115: `/vi/preview/B5jguSS7AKY`
+  - Customers overview (internal only, it mentions both): `/vi/preview/MPy9y1WqUH0`
+- To publish after approval, delete the page's line in `src/content/visibility.ts`
+- The whole site is `noindex` with `robots.txt` set to disallow all until launch. See the launch checklist in `PLAN.md`
 
 ## Gotchas
 

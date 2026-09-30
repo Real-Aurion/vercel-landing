@@ -64,7 +64,7 @@ Where the drafts live: structure in `src/content/menu.ts`, copy in `src/dictiona
 ## Still open
 - [x] Implementation timeline: removed from the FAQ (too early to say)
 - [ ] Should careers mail go to a different address from `shanlin@aurion.technology`?
-- [ ] Do we have written permission from the hospitals to publish project details (logos are OK)?
+- [ ] Hospital approval for the case study pages. Lam is asking both hospitals via the preview links (PROGRESS.md). Publish each page only once its hospital says yes
 
 ## Assets (would make the site much stronger)
 - [ ] Screenshots of the real products: Assistant chat, the 115 surgery calendar (coordinator, doctor and nurse views), the QR scan screen, the CDR dashboard

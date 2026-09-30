@@ -1,4 +1,5 @@
 import type { Dictionary } from "@/dictionaries";
+import { isPublished } from "./visibility";
 
 
 export type MenuKey = Exclude<keyof Dictionary["menu"], "foundationLabel">;
@@ -70,7 +71,7 @@ export const productMenu: ProductMenu = {
 };
 
 
-export const simpleMenus: Record<SimpleMenuId, MenuLink[]> = {
+const allSimpleMenus: Record<SimpleMenuId, MenuLink[]> = {
   solutions: [
     { key: "hospitals", href: "/solutions/hospitals", icon: "building" },
     { key: "labs", href: "/solutions/labs", icon: "beaker" },
@@ -93,3 +94,8 @@ export const simpleMenus: Record<SimpleMenuId, MenuLink[]> = {
     { key: "contactUs", href: "/#contact", icon: "envelope" },
   ],
 };
+
+
+export const simpleMenus = Object.fromEntries(
+  Object.entries(allSimpleMenus).map(([id, links]) => [id, links.filter((link) => isPublished(link.href))]),
+) as Record<SimpleMenuId, MenuLink[]>;

@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const { meta } = getDictionary(lang);
-  return { title: meta.title, description: meta.description };
+  return { title: meta.title, description: meta.description, robots: { index: false, follow: false } };
 }
 
 
