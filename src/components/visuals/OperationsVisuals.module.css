@@ -1,0 +1,445 @@
+.wide {
+  max-width: 600px;
+}
+
+
+.roles {
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 3px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-alt);
+}
+
+
+.role {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+
+.role[data-active="true"] {
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  color: var(--text);
+}
+
+
+.calendar {
+  display: grid;
+  grid-template-columns: 44px repeat(6, minmax(0, 1fr));
+  grid-auto-rows: minmax(52px, auto);
+  grid-template-rows: 20px;
+  gap: 4px;
+}
+
+
+.hour {
+  align-self: end;
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+
+.room {
+  grid-column: 1;
+  align-self: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+
+.surgery {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 6px 8px;
+  overflow: hidden;
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent-light);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+
+.surgery strong {
+  overflow: hidden;
+  font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.surgery span {
+  overflow: hidden;
+  font-size: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--text-secondary);
+}
+
+
+.surgery[data-state="done"] {
+  border-color: var(--border);
+  background: var(--bg-alt);
+  color: var(--text-secondary);
+}
+
+
+.surgery[data-state="live"] {
+  border-color: var(--success);
+  background: var(--success-light);
+}
+
+
+.surgery[data-state="moving"] {
+  border: 1.5px dashed var(--warning);
+  background: var(--warning-light);
+  box-shadow: var(--shadow-lg);
+  animation: nudge 2.4s ease-in-out infinite;
+}
+
+
+.moveIcon {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 12px;
+  height: 12px;
+  color: var(--warning-strong);
+}
+
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+
+.legendItem i {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+
+.legendItem i[data-state="done"] {
+  background: var(--border);
+}
+
+
+.legendItem i[data-state="live"] {
+  background: var(--success);
+}
+
+
+.legendItem i[data-state="moving"] {
+  background: var(--warning);
+}
+
+
+.flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-alt);
+}
+
+
+.stageHead {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+.stageHead span {
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--surface);
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  color: var(--accent);
+}
+
+
+.patient {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  font-size: 11px;
+}
+
+
+.patient span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+
+.patient svg {
+  width: 11px;
+  height: 11px;
+}
+
+
+.patient[data-late="true"] {
+  border-color: var(--warning);
+}
+
+
+.patient[data-late="true"] span {
+  color: var(--warning-strong);
+}
+
+
+.phone {
+  width: 240px;
+  padding: 18px 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow-panel);
+  font-size: 12px;
+}
+
+
+.phoneTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+
+.phoneTitle svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+}
+
+
+.viewfinder {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 150px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--ink);
+}
+
+
+/* A QR-ish pattern from two crossed dot grids — decorative, not a real code. */
+.qr {
+  width: 84px;
+  height: 84px;
+  border: 6px solid var(--bg);
+  border-radius: 6px;
+  background:
+    conic-gradient(var(--bg) 25%, transparent 0 50%, var(--bg) 0 75%, transparent 0) 0 0 / 14px 14px,
+    var(--ink);
+}
+
+
+.qrScan {
+  position: absolute;
+  right: 24px;
+  left: 24px;
+  height: 2px;
+  background: var(--accent-bright);
+  box-shadow: 0 0 12px var(--accent-bright);
+  animation: qr-scan 1.8s ease-in-out infinite alternate;
+}
+
+
+.confirmed {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 14px 0 10px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+
+.confirmed svg {
+  width: 16px;
+  height: 16px;
+}
+
+
+.qrDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+}
+
+
+.qrDetails div {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+
+.qrDetails dt {
+  color: var(--text-secondary);
+}
+
+
+.qrDetails dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+
+.kpis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+
+.kpi {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-alt);
+}
+
+
+.kpi strong {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+
+
+.kpi span {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+
+.chartTitle {
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.barRow {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+}
+
+
+.barRow i {
+  height: 10px;
+  border-radius: 3px;
+  background: var(--accent-light);
+  transform-origin: left;
+  animation: grow 1s ease both;
+}
+
+
+.barRow i[data-top="true"] {
+  background: var(--accent);
+}
+
+
+@keyframes nudge {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+
+@keyframes qr-scan {
+  from {
+    top: 24px;
+  }
+
+  to {
+    top: calc(100% - 24px);
+  }
+}
+
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+
+@media (max-width: 560px) {
+  .calendar {
+    grid-template-columns: 36px repeat(6, minmax(0, 1fr));
+  }
+
+  .surgery span,
+  .flow .patient span {
+    display: none;
+  }
+}

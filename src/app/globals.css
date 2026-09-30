@@ -4,6 +4,19 @@
   --accent-light: #e8f4f8;
   --accent-bright: #2bb3c0;
   --emerald: #10b981;
+  --success: #10b981;
+  --success-light: #d1fae5;
+  --success-strong: #047857;
+  --warning: #f59e0b;
+  --warning-light: #fef3c7;
+  --warning-strong: #b45309;
+  --ink: #0b1f29;
+  --ink-soft: #16323f;
+  --ink-line: rgba(255, 255, 255, 0.12);
+  --ink-muted: rgba(255, 255, 255, 0.62);
+  --paper: #fdfcf8;
+  --stage-dot: rgba(24, 88, 112, 0.14);
+  --rail: #eef2f6;
   --text: #1e293b;
   --text-secondary: #64748b;
   --bg: #ffffff;
@@ -132,17 +145,55 @@ button {
 }
 
 
+/* Glean-style label: small monospace text led by a square marker, no pill. */
 .overline {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 16px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: var(--accent-light);
-  color: var(--accent);
+  font-family: var(--font-mono), monospace;
   font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-weight: 500;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--accent);
+}
+
+
+.overline::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+}
+
+
+/* Hairline rails at the container edges, running the full page like Glean's framed layout. */
+.rails {
+  position: relative;
+}
+
+
+.rails::before,
+.rails::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 1px;
+  background: var(--rail);
+  pointer-events: none;
+}
+
+
+.rails::before {
+  left: max(0px, calc(50% - var(--max-width) / 2));
+}
+
+
+.rails::after {
+  right: max(0px, calc(50% - var(--max-width) / 2));
 }
 
 

@@ -1,9 +1,11 @@
 import { notFound } from "next/navigation";
+import { Blocks } from "@/components/page/Blocks";
 import { ContactCta } from "@/components/sections/ContactCta";
 import { Faq } from "@/components/sections/Faq";
 import { Hero } from "@/components/sections/Hero";
 import { Impact } from "@/components/sections/Impact";
 import { Partners } from "@/components/sections/Partners";
+import { homeBlocks } from "@/content/pages/home";
 import { getDictionary, hasLocale } from "@/dictionaries";
 
 
@@ -15,6 +17,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
     <>
       <Hero lang={lang} hero={dict.hero} />
       <Partners customers={dict.customers} />
+      <Blocks blocks={homeBlocks[lang]} lang={lang} dict={dict} />
       <Impact impact={dict.impact} />
       <Faq faq={dict.faq} />
       <ContactCta cta={dict.cta} />

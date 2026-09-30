@@ -13,44 +13,130 @@
     "openMenu": "Mở menu",
     "closeMenu": "Đóng menu",
     "languageLabel": "Chọn ngôn ngữ",
-    "comingSoon": "Sắp ra mắt"
+    "comingSoon": "Sắp ra mắt",
+    "demo": "Trao đổi với chúng tôi"
   },
   "menu": {
-    "overview": { "title": "Tổng quan nền tảng", "desc": "Xem cách Aurion vận hành." },
+    "overview": {
+      "title": "Tổng quan nền tảng",
+      "desc": "Xem cách Aurion vận hành."
+    },
     "foundationLabel": "Xây dựng cho AI y khoa.",
-    "clinicalContext": { "title": "Aurion Clinical Context" },
-    "connectors": { "title": "Kết nối HIS · LIS · PACS · EHR" },
-    "dataPlatform": { "title": "Kho dữ liệu lâm sàng (CDR)" },
-    "deidentification": { "title": "Ẩn danh hóa dữ liệu" },
-    "protect": { "title": "Aurion Protect" },
-    "intelligence": { "title": "Aurion Intelligence" },
-    "modelHub": { "title": "Kho mô hình" },
-    "ocrEngine": { "title": "OCR y khoa" },
-    "usageControls": { "title": "Kiểm soát sử dụng" },
-    "assistant": { "title": "Aurion Assistant", "desc": "Trợ lý AI lâm sàng của bạn" },
-    "knowledgeSearch": { "title": "Tra cứu tri thức y khoa" },
-    "guidelineQa": { "title": "Hỏi đáp phác đồ" },
-    "documentDrafting": { "title": "Soạn thảo hồ sơ" },
-    "labExtraction": { "title": "Trích xuất kết quả xét nghiệm" },
-    "operations": { "title": "Aurion Operations", "desc": "Tự động hóa vận hành bệnh viện" },
-    "surgerySchedule": { "title": "Lịch phẫu thuật" },
-    "patientFlow": { "title": "Điều phối bệnh nhân" },
-    "labAutomation": { "title": "Tự động hóa xét nghiệm" },
-    "researchPipelines": { "title": "Dữ liệu cho nghiên cứu" },
-    "insights": { "title": "Aurion Insights", "desc": "Xem AI tạo tác động lớn nhất ở đâu" },
-    "hospitals": { "title": "Bệnh viện / phòng khám", "desc": "Chăm sóc và điều phối bệnh nhân" },
-    "labs": { "title": "Phòng xét nghiệm", "desc": "Phân tích mẫu số lượng lớn" },
-    "research": { "title": "Viện nghiên cứu", "desc": "Khám phá và phát triển y học" },
-    "nhidong1": { "title": "Bệnh viện Nhi Đồng 1", "desc": "Câu chuyện triển khai" },
-    "nd115": { "title": "Bệnh viện Nhân dân 115", "desc": "Câu chuyện triển khai" },
-    "allCustomers": { "title": "Tất cả đối tác", "desc": "Các tổ chức tin dùng Aurion" },
-    "blog": { "title": "Blog", "desc": "Góc nhìn về AI trong y tế" },
-    "faq": { "title": "Hỏi đáp", "desc": "Câu hỏi thường gặp" },
-    "security": { "title": "Bảo mật & tuân thủ", "desc": "Cách chúng tôi bảo vệ dữ liệu" },
-    "about": { "title": "Về Aurion", "desc": "Sứ mệnh và câu chuyện" },
-    "values": { "title": "Giá trị cốt lõi", "desc": "Điều định hướng chúng tôi" },
-    "careers": { "title": "Tuyển dụng", "desc": "Cùng xây dựng Aurion" },
-    "contactUs": { "title": "Liên hệ", "desc": "Trò chuyện với đội ngũ" }
+    "clinicalContext": {
+      "title": "Aurion Clinical Context"
+    },
+    "connectors": {
+      "title": "Kết nối HIS & hệ thống bệnh viện"
+    },
+    "dataPlatform": {
+      "title": "Kho dữ liệu lâm sàng (CDR)"
+    },
+    "deidentification": {
+      "title": "Ẩn danh hóa dữ liệu"
+    },
+    "protect": {
+      "title": "Aurion Protect"
+    },
+    "intelligence": {
+      "title": "Aurion Intelligence"
+    },
+    "modelHub": {
+      "title": "Kho mô hình"
+    },
+    "ocrEngine": {
+      "title": "OCR y khoa"
+    },
+    "usageControls": {
+      "title": "Kiểm soát sử dụng"
+    },
+    "assistant": {
+      "title": "Aurion Assistant",
+      "desc": "Trợ lý AI lâm sàng của bạn"
+    },
+    "knowledgeSearch": {
+      "title": "Tra cứu tri thức y khoa"
+    },
+    "guidelineQa": {
+      "title": "Hỏi đáp phác đồ"
+    },
+    "documentDrafting": {
+      "title": "Soạn thảo hồ sơ"
+    },
+    "labExtraction": {
+      "title": "Trích xuất kết quả xét nghiệm"
+    },
+    "operations": {
+      "title": "Aurion Operations",
+      "desc": "Tự động hóa vận hành bệnh viện"
+    },
+    "surgerySchedule": {
+      "title": "Lịch phẫu thuật"
+    },
+    "patientFlow": {
+      "title": "Điều phối bệnh nhân"
+    },
+    "labAutomation": {
+      "title": "Tự động hóa xét nghiệm"
+    },
+    "researchPipelines": {
+      "title": "Dữ liệu cho nghiên cứu"
+    },
+    "insights": {
+      "title": "Aurion Insights",
+      "desc": "Xem AI tạo tác động lớn nhất ở đâu"
+    },
+    "hospitals": {
+      "title": "Bệnh viện / phòng khám",
+      "desc": "Chăm sóc và điều phối bệnh nhân"
+    },
+    "labs": {
+      "title": "Phòng xét nghiệm",
+      "desc": "Phân tích mẫu số lượng lớn"
+    },
+    "research": {
+      "title": "Viện nghiên cứu",
+      "desc": "Khám phá và phát triển y học"
+    },
+    "nhidong1": {
+      "title": "Bệnh viện Nhi Đồng 1",
+      "desc": "Câu chuyện triển khai"
+    },
+    "nd115": {
+      "title": "Bệnh viện Nhân dân 115",
+      "desc": "Câu chuyện triển khai"
+    },
+    "allCustomers": {
+      "title": "Tất cả đối tác",
+      "desc": "Các tổ chức tin dùng Aurion"
+    },
+    "stories": {
+      "title": "Câu chuyện khách hàng",
+      "desc": "Aurion tại Nhi Đồng 1 và 115"
+    },
+    "faq": {
+      "title": "Hỏi đáp",
+      "desc": "Câu hỏi thường gặp"
+    },
+    "security": {
+      "title": "Bảo mật & tuân thủ",
+      "desc": "Cách chúng tôi bảo vệ dữ liệu"
+    },
+    "about": {
+      "title": "Về Aurion",
+      "desc": "Sứ mệnh và câu chuyện"
+    },
+    "values": {
+      "title": "Giá trị cốt lõi",
+      "desc": "Điều định hướng chúng tôi"
+    },
+    "careers": {
+      "title": "Tuyển dụng",
+      "desc": "Cùng xây dựng Aurion"
+    },
+    "contactUs": {
+      "title": "Liên hệ",
+      "desc": "Trò chuyện với đội ngũ"
+    }
   },
   "hero": {
     "eyebrow": "Trí tuệ Y khoa",
@@ -62,8 +148,14 @@
     "lead": "Aurion xây dựng hạ tầng trí tuệ y khoa tại Châu Á - Thái Bình Dương, chuyển đổi dữ liệu y tế thô thành các hệ thống AI tự học liên tục, giúp nâng cao hiệu quả vận hành bệnh viện, tăng năng suất phòng xét nghiệm và cải thiện kết quả nghiên cứu.",
     "cta": "Xem giải pháp",
     "ctaSecondary": "Liên hệ",
-    "feature1": { "title": "Nghiên cứu", "desc": "OCR & Machine Learning" },
-    "feature2": { "title": "Vận hành", "desc": "Huấn luyện AI & Tự động hóa" }
+    "feature1": {
+      "title": "Nghiên cứu",
+      "desc": "OCR & Machine Learning"
+    },
+    "feature2": {
+      "title": "Vận hành",
+      "desc": "Huấn luyện AI & Tự động hóa"
+    }
   },
   "customers": {
     "label": "Đối tác tin cậy",
@@ -107,12 +199,12 @@
         "answer": "Thời gian triển khai tùy thuộc vào quy mô dự án. Phần lớn các hệ thống được tích hợp trong 8-12 tuần, với lộ trình triển khai theo giai đoạn cho các tổ chức lớn. Chúng tôi phối hợp chặt chẽ với đội ngũ của bạn để đảm bảo quá trình chuyển đổi diễn ra suôn sẻ."
       },
       {
-        "question": "Nền tảng có tuân thủ tiêu chuẩn HIPAA không?",
-        "answer": "Có. Tất cả giải pháp của Aurion đều được xây dựng trên nền tảng tuân thủ HIPAA. Chúng tôi cung cấp Thỏa thuận Đối tác Kinh doanh (BAA) và duy trì kiểm toán bảo mật toàn diện cùng các chứng nhận liên quan."
+        "question": "Dữ liệu được lưu trữ ở đâu?",
+        "answer": "Toàn bộ dữ liệu được lưu trữ tại Việt Nam, trên máy chủ đặt ngay tại bệnh viện (on-premise). Dữ liệu bệnh nhân không rời khỏi hạ tầng của bệnh viện."
       },
       {
-        "question": "Aurion có tích hợp được với hệ thống bệnh án điện tử (EHR) hiện có không?",
-        "answer": "Chúng tôi hỗ trợ tích hợp với các nền tảng EHR hàng đầu như Epic và Cerner thông qua các đầu nối chuyên biệt. Với các hệ thống khác, chúng tôi sẽ đánh giá khả năng tương thích trong giai đoạn khảo sát và cùng bạn xây dựng lộ trình tích hợp phù hợp."
+        "question": "Aurion có tích hợp được với hệ thống hiện có của bệnh viện không?",
+        "answer": "Có. Aurion đang kết nối với hệ thống HIS cho dự án kho dữ liệu lâm sàng. Với LIS, PACS hay bệnh án điện tử, chúng tôi khảo sát trong giai đoạn đầu và xây dựng đầu nối theo nhu cầu của bệnh viện."
       },
       {
         "question": "Aurion hỗ trợ khách hàng như thế nào?",
@@ -120,7 +212,11 @@
       },
       {
         "question": "Aurion đảm bảo an toàn dữ liệu bằng cách nào?",
-        "answer": "Chúng tôi áp dụng mã hóa đầu cuối, phân quyền truy cập theo vai trò, kiểm toán bảo mật định kỳ và duy trì chứng nhận SOC 2 Type II. Toàn bộ dữ liệu được lưu trữ tại các trung tâm dữ liệu tuân thủ tiêu chuẩn HIPAA."
+        "answer": "Hệ thống được triển khai on-premise tại bệnh viện, kết hợp mã hóa dữ liệu, phân quyền truy cập theo vai trò và nhật ký truy cập đầy đủ. Dữ liệu được ẩn danh hóa trước khi dùng cho nghiên cứu."
+      },
+      {
+        "question": "Aurion giúp bệnh viện chuyển đổi số như thế nào?",
+        "answer": "Aurion giúp bệnh viện số hóa quy trình theo lộ trình chuyển đổi số của ngành y tế: đưa dữ liệu về một nơi, tự động hóa công việc giấy tờ và giúp đội ngũ y tế tiết kiệm thời gian."
       }
     ]
   },
@@ -135,5 +231,9 @@
     "location": "Thành phố Hồ Chí Minh, Việt Nam",
     "company": "Công ty",
     "contact": "Liên hệ"
+  },
+  "status": {
+    "live": "Đang vận hành",
+    "available": "Sẵn sàng triển khai"
   }
 }

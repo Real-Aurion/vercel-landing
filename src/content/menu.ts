@@ -82,7 +82,7 @@ export const simpleMenus: Record<SimpleMenuId, MenuLink[]> = {
     { key: "allCustomers", href: "/customers", icon: "users" },
   ],
   resources: [
-    { key: "blog", href: "/blog", icon: "newspaper" },
+    { key: "stories", href: "/customers", icon: "newspaper" },
     { key: "faq", href: "/#faq", icon: "question" },
     { key: "security", href: "/security", icon: "lock" },
   ],

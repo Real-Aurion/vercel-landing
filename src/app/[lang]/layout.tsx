@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { JetBrains_Mono, Manrope } from "next/font/google";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/nav/Header";
@@ -11,6 +11,12 @@ import "../globals.css";
 const manrope = Manrope({
   subsets: ["latin", "latin-ext", "vietnamese"],
   variable: "--font-sans",
+});
+
+
+const mono = JetBrains_Mono({
+  subsets: ["latin", "vietnamese"],
+  variable: "--font-mono",
 });
 
 
@@ -32,10 +38,10 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   if (!hasLocale(lang)) notFound();
   const dict = getDictionary(lang);
   return (
-    <html lang={lang} className={manrope.variable}>
+    <html lang={lang} className={`${manrope.variable} ${mono.variable}`}>
       <body>
         <Header lang={lang} dict={dict} />
-        <main>{children}</main>
+        <main className="rails">{children}</main>
         <Footer lang={lang} dict={dict} />
       </body>
     </html>

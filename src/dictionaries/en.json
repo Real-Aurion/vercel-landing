@@ -13,44 +13,130 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "languageLabel": "Select language",
-    "comingSoon": "Coming soon"
+    "comingSoon": "Coming soon",
+    "demo": "Talk to us"
   },
   "menu": {
-    "overview": { "title": "Platform overview", "desc": "See how Aurion works." },
+    "overview": {
+      "title": "Platform overview",
+      "desc": "See how Aurion works."
+    },
     "foundationLabel": "Built for clinical AI.",
-    "clinicalContext": { "title": "Aurion Clinical Context" },
-    "connectors": { "title": "HIS · LIS · PACS · EHR connectors" },
-    "dataPlatform": { "title": "Clinical data repository (CDR)" },
-    "deidentification": { "title": "Data de-identification" },
-    "protect": { "title": "Aurion Protect" },
-    "intelligence": { "title": "Aurion Intelligence" },
-    "modelHub": { "title": "Model hub" },
-    "ocrEngine": { "title": "Medical OCR" },
-    "usageControls": { "title": "Usage controls" },
-    "assistant": { "title": "Aurion Assistant", "desc": "Your clinical AI coworker" },
-    "knowledgeSearch": { "title": "Medical knowledge search" },
-    "guidelineQa": { "title": "Guideline Q&A" },
-    "documentDrafting": { "title": "Clinical documentation" },
-    "labExtraction": { "title": "Lab result extraction" },
-    "operations": { "title": "Aurion Operations", "desc": "Automate hospital workflows" },
-    "surgerySchedule": { "title": "Surgery scheduling" },
-    "patientFlow": { "title": "Patient flow" },
-    "labAutomation": { "title": "Lab automation" },
-    "researchPipelines": { "title": "Research data pipelines" },
-    "insights": { "title": "Aurion Insights", "desc": "See where AI can make the biggest impact" },
-    "hospitals": { "title": "Hospitals / clinics", "desc": "Direct patient care & management" },
-    "labs": { "title": "Pathology / testing labs", "desc": "High-volume sample analysis" },
-    "research": { "title": "Research facilities", "desc": "Scientific discovery & enhancement" },
-    "nhidong1": { "title": "Nhi Dong 1 Hospital", "desc": "Deployment story" },
-    "nd115": { "title": "People's Hospital 115", "desc": "Deployment story" },
-    "allCustomers": { "title": "All customers", "desc": "Institutions that trust Aurion" },
-    "blog": { "title": "Blog", "desc": "Perspectives on AI in healthcare" },
-    "faq": { "title": "FAQ", "desc": "Common questions" },
-    "security": { "title": "Security & compliance", "desc": "How we protect your data" },
-    "about": { "title": "About Aurion", "desc": "Our mission and story" },
-    "values": { "title": "Values", "desc": "What guides us" },
-    "careers": { "title": "Careers", "desc": "Help build Aurion" },
-    "contactUs": { "title": "Contact", "desc": "Talk to the team" }
+    "clinicalContext": {
+      "title": "Aurion Clinical Context"
+    },
+    "connectors": {
+      "title": "HIS & hospital system connectors"
+    },
+    "dataPlatform": {
+      "title": "Clinical data repository (CDR)"
+    },
+    "deidentification": {
+      "title": "Data de-identification"
+    },
+    "protect": {
+      "title": "Aurion Protect"
+    },
+    "intelligence": {
+      "title": "Aurion Intelligence"
+    },
+    "modelHub": {
+      "title": "Model hub"
+    },
+    "ocrEngine": {
+      "title": "Medical OCR"
+    },
+    "usageControls": {
+      "title": "Usage controls"
+    },
+    "assistant": {
+      "title": "Aurion Assistant",
+      "desc": "Your clinical AI coworker"
+    },
+    "knowledgeSearch": {
+      "title": "Medical knowledge search"
+    },
+    "guidelineQa": {
+      "title": "Guideline Q&A"
+    },
+    "documentDrafting": {
+      "title": "Clinical documentation"
+    },
+    "labExtraction": {
+      "title": "Lab result extraction"
+    },
+    "operations": {
+      "title": "Aurion Operations",
+      "desc": "Automate hospital workflows"
+    },
+    "surgerySchedule": {
+      "title": "Surgery scheduling"
+    },
+    "patientFlow": {
+      "title": "Patient flow"
+    },
+    "labAutomation": {
+      "title": "Lab automation"
+    },
+    "researchPipelines": {
+      "title": "Research data pipelines"
+    },
+    "insights": {
+      "title": "Aurion Insights",
+      "desc": "See where AI can make the biggest impact"
+    },
+    "hospitals": {
+      "title": "Hospitals / clinics",
+      "desc": "Direct patient care & management"
+    },
+    "labs": {
+      "title": "Pathology / testing labs",
+      "desc": "High-volume sample analysis"
+    },
+    "research": {
+      "title": "Research facilities",
+      "desc": "Scientific discovery & enhancement"
+    },
+    "nhidong1": {
+      "title": "Nhi Dong 1 Hospital",
+      "desc": "Deployment story"
+    },
+    "nd115": {
+      "title": "People's Hospital 115",
+      "desc": "Deployment story"
+    },
+    "allCustomers": {
+      "title": "All customers",
+      "desc": "Institutions that trust Aurion"
+    },
+    "stories": {
+      "title": "Customer stories",
+      "desc": "Aurion at Nhi Dong 1 and 115"
+    },
+    "faq": {
+      "title": "FAQ",
+      "desc": "Common questions"
+    },
+    "security": {
+      "title": "Security & compliance",
+      "desc": "How we protect your data"
+    },
+    "about": {
+      "title": "About Aurion",
+      "desc": "Our mission and story"
+    },
+    "values": {
+      "title": "Values",
+      "desc": "What guides us"
+    },
+    "careers": {
+      "title": "Careers",
+      "desc": "Help build Aurion"
+    },
+    "contactUs": {
+      "title": "Contact",
+      "desc": "Talk to the team"
+    }
   },
   "hero": {
     "eyebrow": "Healthcare Intelligence",
@@ -62,8 +148,14 @@
     "lead": "Aurion is building Asia-Pacific clinical intelligence infrastructure, transforming raw medical data into continuously learning AI engines that improve hospital operational efficiency, lab throughput, and research outcomes.",
     "cta": "See How It Works",
     "ctaSecondary": "Contact Us",
-    "feature1": { "title": "Research", "desc": "OCR & Machine Learning" },
-    "feature2": { "title": "Operation", "desc": "AI Training & Automation" }
+    "feature1": {
+      "title": "Research",
+      "desc": "OCR & Machine Learning"
+    },
+    "feature2": {
+      "title": "Operation",
+      "desc": "AI Training & Automation"
+    }
   },
   "customers": {
     "label": "Trusted Partners",
@@ -107,20 +199,24 @@
         "answer": "Implementation timelines vary by project scope. Most integrations are completed in 8-12 weeks, with phased rollouts for larger organizations. We work closely with your team to minimize disruption."
       },
       {
-        "question": "Is your platform HIPAA compliant?",
-        "answer": "Yes, all Aurion solutions are built with HIPAA compliance at their core. We provide Business Associate Agreements (BAA) and maintain comprehensive security audits and certifications."
+        "question": "Where is our data stored?",
+        "answer": "All data stays in Vietnam, on servers inside the hospital (on-premise). Patient data never leaves the hospital's own infrastructure."
       },
       {
-        "question": "Can you integrate with our existing EHR system?",
-        "answer": "We support integrations with leading EHR platforms like Epic and Cerner through tailored connectors. For other systems, we evaluate compatibility during discovery and map a clear integration plan together."
+        "question": "Can Aurion integrate with our existing systems?",
+        "answer": "Yes. Aurion already connects to the hospital HIS for our clinical data repository project. For LIS, PACS or electronic medical records, we assess the systems early on and build connectors to fit the hospital's needs."
       },
       {
         "question": "What kind of support do you provide?",
         "answer": "We provide dedicated launch support, scheduled check-ins, and rapid responses during business hours, with on-call escalation for critical issues."
       },
       {
-        "question": "How do you ensure data security?",
-        "answer": "We employ end-to-end encryption, role-based access controls, regular security audits, and maintain SOC 2 Type II certification. All data is stored in HIPAA-compliant data centers."
+        "question": "How do you keep data secure?",
+        "answer": "Aurion runs on-premise at the hospital, with encryption, role-based access and a full access log. Data is de-identified before it is used for research."
+      },
+      {
+        "question": "How does Aurion support digital transformation?",
+        "answer": "Aurion helps hospitals digitise in line with the healthcare sector's digital transformation roadmap: bringing data into one place, automating paperwork and giving care teams their time back."
       }
     ]
   },
@@ -135,5 +231,9 @@
     "location": "Ho Chi Minh City, Vietnam",
     "company": "Company",
     "contact": "Get in Touch"
+  },
+  "status": {
+    "live": "Live",
+    "available": "Available"
   }
 }

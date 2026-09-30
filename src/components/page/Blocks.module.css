@@ -1,34 +1,300 @@
-.heading {
-  max-width: 680px;
-  margin-bottom: 48px;
+.section {
+  padding: var(--section-pad) 0;
+  border-top: 1px solid var(--border-light);
 }
 
 
-.heading h2 {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+.section[data-type="stats"] {
+  border-top: 0;
+  background: var(--ink);
+  color: var(--bg);
+}
+
+
+.section[data-type="logos"] {
+  padding: 56px 0;
+}
+
+
+.heading {
+  font-size: clamp(1.75rem, 3.6vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
 }
 
 
 .lead {
-  margin-top: 16px;
+  margin-top: 18px;
   font-size: 17px;
+  line-height: 1.7;
   color: var(--text-secondary);
 }
 
 
-.grid,
-.metrics,
-.steps {
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+.status[data-status="live"] {
+  background: var(--success-light);
+  color: var(--success-strong);
+}
+
+
+.status[data-status="live"]::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+
+.status[data-status="available"] {
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.points li {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+
+.check {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  padding: 3px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--bg);
+}
+
+
+.gridLayout {
   display: grid;
-  gap: 24px;
+  gap: 40px;
+}
+
+
+.sticky {
+  align-self: start;
+}
+
+
+.cells {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  list-style: none;
+}
+
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: calc(var(--page-top) + 24px);
+  transition: background 0.4s ease;
+}
+
+
+.cell:first-child {
+  border-top: 0;
+}
+
+
+/* A menu link like /platform#ocr lands on one cell, so the cell shows it was the target. */
+.cell:target {
+  background: var(--accent-light);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+
+.cellTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+
+.cellIcon {
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
+}
+
+
+.cellTitle {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+
+
+.cellDesc {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+
+.split {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+
+.splitMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+
+.splitMeta :global(.overline) {
+  margin-bottom: 0;
+}
+
+
+.splitVisual {
+  min-width: 0;
+}
+
+
+.splitVisual > * {
+  min-height: 420px;
+}
+
+
+.statsHead {
+  max-width: 720px;
+  margin-bottom: 56px;
+}
+
+
+.statsHead .heading {
+  color: var(--bg);
+}
+
+
+.stats {
+  display: grid;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 
-.card {
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px 0;
+  border-top: 1px solid var(--ink-line);
+}
+
+
+.statValue {
+  font-size: clamp(3rem, 7vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--accent-bright);
+}
+
+
+.statLabel {
+  max-width: 240px;
+  font-size: 15px;
+  color: var(--ink-muted);
+}
+
+
+.centerHead {
+  max-width: 720px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+
+.steps {
   position: relative;
+  display: grid;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.step {
+  position: relative;
+}
+
+
+.stepNumber {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 20px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  background: var(--bg);
+  font-family: var(--font-mono), monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+
+.linkGrid {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.linkCard {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -36,56 +302,19 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--surface);
-  box-shadow: var(--shadow);
-  scroll-margin-top: calc(var(--page-top) + 24px);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color var(--transition);
+  transition: border-color var(--transition), box-shadow 0.4s ease, transform 0.4s ease;
 }
 
 
-/* A menu link like /platform#ocr lands on one card, so the card itself shows it was the target. */
-.card:target {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-light), var(--shadow-lg);
+.linkCard .cellIcon {
+  margin-bottom: 20px;
 }
 
 
 .linkCard:hover {
+  border-color: var(--accent);
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
-}
-
-
-.tile {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  margin-bottom: 20px;
-  border-radius: var(--radius-button);
-  background: var(--accent-light);
-  color: var(--accent);
-}
-
-
-.tileIcon {
-  width: 22px;
-  height: 22px;
-}
-
-
-.cardTitle {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-}
-
-
-.cardDesc {
-  margin-top: 8px;
-  font-size: 15px;
-  line-height: 1.65;
-  color: var(--text-secondary);
 }
 
 
@@ -93,7 +322,7 @@
   width: 18px;
   height: 18px;
   margin-top: auto;
-  padding-top: 20px;
+  padding-top: 24px;
   box-sizing: content-box;
   color: var(--accent);
   transition: transform 0.4s ease;
@@ -102,45 +331,6 @@
 
 .linkCard:hover .linkArrow {
   transform: translateX(4px);
-}
-
-
-.metric {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 28px;
-  border-left: 2px solid var(--accent);
-}
-
-
-.metricValue {
-  font-size: clamp(2.25rem, 4vw, 3rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  color: var(--accent);
-}
-
-
-.metricLabel {
-  color: var(--text-secondary);
-}
-
-
-.step {
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-}
-
-
-.stepNumber {
-  display: block;
-  margin-bottom: 16px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--accent);
 }
 
 
@@ -154,29 +344,114 @@
 }
 
 
-.noticeTitle {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+.noticeTile {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 24px;
+  border-radius: var(--radius);
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+
+.noticeIcon {
+  width: 26px;
+  height: 26px;
 }
 
 
 .notice :global(.button) {
-  margin-top: 28px;
+  margin-top: 32px;
 }
 
 
 @media (min-width: 561px) {
-  .grid,
-  .metrics,
-  .steps {
+  .cells {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cell {
+    border-left: 1px solid var(--border);
+  }
+
+  .cell:nth-child(2n + 1) {
+    border-left: 0;
+  }
+
+  .cell:nth-child(2) {
+    border-top: 0;
+  }
+
+  .linkGrid,
+  .stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 
 @media (min-width: 1025px) {
-  .grid,
-  .metrics,
+  .gridLayout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 64px;
+  }
+
+  .sticky {
+    position: sticky;
+    top: calc(var(--page-top) + 32px);
+  }
+
+  .split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+    gap: 72px;
+  }
+
+  .split[data-reverse="true"] {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  }
+
+  .split[data-reverse="true"] .splitText {
+    order: 2;
+  }
+
+  .splitVisual > * {
+    min-height: 480px;
+  }
+
+  .linkGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .stats {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    grid-auto-flow: column;
+    gap: 32px;
+  }
+
+  .stat {
+    padding: 32px 0 0;
+  }
+
   .steps {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* The thread that links the step numbers into one flow. */
+  .steps::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 16%;
+    left: 22px;
+    border-top: 1px dashed var(--accent);
+    opacity: 0.4;
+  }
+}
+
+
+@keyframes pulse {
+  50% {
+    box-shadow: 0 0 0 4px var(--success-light);
   }
 }

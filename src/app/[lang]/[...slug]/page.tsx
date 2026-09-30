@@ -31,11 +31,12 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/[...slug]"
 
 export default async function ContentPage({ params }: PageProps<"/[lang]/[...slug]">) {
   const { lang, content } = await resolve(params);
+  const dict = getDictionary(lang);
   return (
     <>
-      <PageHero hero={content.hero} />
-      <Blocks blocks={content.blocks} lang={lang} />
-      <ContactCta cta={getDictionary(lang).cta} />
+      <PageHero hero={content.hero} lang={lang} nav={dict.nav} />
+      <Blocks blocks={content.blocks} lang={lang} dict={dict} />
+      <ContactCta cta={dict.cta} />
     </>
   );
 }

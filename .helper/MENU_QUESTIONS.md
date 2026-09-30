@@ -1,6 +1,6 @@
 # Menu — Open Questions for Lam
 
-**Status: waiting on answers. Ask Lam these before building any page behind the menu.**
+**Status: most questions answered on 2026-09-30 (see PROGRESS.md → Confirmed facts). The open items are below.**
 
 Every label, grouping and link in the nav today is a **draft** I (Claude) wrote from what we know: the WordPress copy, the Jira projects (ND1 RAG, ND1 CDR, 115 surgery calendar) and Glean's structure. Nothing here is confirmed. Work through it with Lam one menu at a time, then update `src/content/menu.ts` and both dictionaries, and tick the item here.
 
@@ -60,6 +60,16 @@ Where the drafts live: structure in `src/content/menu.ts`, copy in `src/dictiona
 - [ ] **Blog:** will posts arrive soon, or should we hide Blog from the menu until they do?
 - [ ] **Assistant:** does it really answer "with sources" (citations)? Which languages does it support?
 - [ ] **Operations:** is surgery scheduling a product, or only the 115 project? Are patient flow and lab automation live anywhere?
+
+## Still open
+- [ ] Is the FAQ's "8–12 weeks to implement" accurate?
+- [ ] Should careers mail go to a different address from `shanlin@aurion.technology`?
+- [ ] Do we have written permission from the hospitals to publish project details (logos are OK)?
+
+## Assets (would make the site much stronger)
+- [ ] Screenshots of the real products: Assistant chat, the 115 surgery calendar (coordinator, doctor and nurse views), the QR scan screen, the CDR dashboard
+- [ ] Photos: hospital staff using the system, the team at work (no names needed), the office
+- [ ] Any brand illustration or 3D artwork (Glean's orange shapes play this role for them)
 
 ## Numbers used on the homepage
 - [ ] The impact metrics (3×, 98%, 40%, 2×, 5×) come from the WordPress site. Are they measured results we can stand behind?

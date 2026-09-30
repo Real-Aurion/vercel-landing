@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/dictionaries";
 import { localHref } from "@/lib/href";
+import { HeroShowcase } from "@/components/visuals/HeroShowcase";
 import styles from "./Hero.module.css";
 
 
@@ -30,6 +31,7 @@ export function Hero({ lang, hero }: { lang: Locale; hero: Dictionary["hero"] })
             </li>
           ))}
         </ul>
+        <HeroShowcase lang={lang} />
       </div>
     </section>
   );

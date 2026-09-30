@@ -9,10 +9,20 @@ const partners = [
 ] as const;
 
 
-export function Partners({ customers }: { customers: Dictionary["customers"] }) {
+export function Partners({ customers, bare = false }: { customers: Dictionary["customers"]; bare?: boolean }) {
+  const row = <PartnerRow customers={customers} />;
+  if (bare) return row;
   return (
     <section className="section" id="customers">
-      <div className="container">
+      <div className="container">{row}</div>
+    </section>
+  );
+}
+
+
+function PartnerRow({ customers }: { customers: Dictionary["customers"] }) {
+  return (
+    <>
         <p className={styles.label}>{customers.heading}</p>
         <ul className={styles.row}>
           {partners.map((partner) => (
@@ -23,7 +33,6 @@ export function Partners({ customers }: { customers: Dictionary["customers"] }) 
             </li>
           ))}
         </ul>
-      </div>
-    </section>
+    </>
   );
 }

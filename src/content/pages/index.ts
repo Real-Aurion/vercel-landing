@@ -1,4 +1,4 @@
-import { about, blog, careers, security } from "./company";
+import { about, careers, security } from "./company";
 import { customers, hospital115, nhiDong1 } from "./customers";
 import { platform } from "./platform";
 import { assistant, insights, operations } from "./products";
@@ -21,5 +21,4 @@ export const pages: Record<string, LocalizedPage> = {
   "about": about,
   "careers": careers,
   "security": security,
-  "blog": blog,
 };

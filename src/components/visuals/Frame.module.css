@@ -1,0 +1,64 @@
+.stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  padding: 40px 20px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(var(--stage-dot) 1px, transparent 1px) 0 0 / 18px 18px,
+    var(--accent-light);
+}
+
+
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-panel);
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+
+.chrome {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 36px;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--border-light);
+  background: var(--bg-alt);
+}
+
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+
+.dots i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+
+.title {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+
+.body {
+  padding: 18px;
+}
