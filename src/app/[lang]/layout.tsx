@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/nav/Header";
 import { ScrollReset } from "@/components/ScrollReset";
 import { getDictionary, hasLocale, locales } from "@/dictionaries";
+import { alternatesFor, organizationJsonLd, SITE_URL } from "@/lib/seo";
 import "../globals.css";
 
 
@@ -30,7 +31,13 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const { meta } = getDictionary(lang);
-  return { title: meta.title, description: meta.description, robots: { index: false, follow: false } };
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: meta.title,
+    description: meta.description,
+    alternates: alternatesFor(lang, ""),
+    openGraph: { type: "website", siteName: "Aurion", title: meta.title, description: meta.description, locale: lang === "vi" ? "vi_VN" : "en_US" },
+  };
 }
 
 
@@ -41,6 +48,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   return (
     <html lang={lang} className={`${manrope.variable} ${mono.variable}`}>
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
         <ScrollReset />
         <Header lang={lang} dict={dict} />
         <main className="rails">{children}</main>

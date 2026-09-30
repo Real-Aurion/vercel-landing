@@ -6,6 +6,7 @@ import { ContactCta } from "@/components/sections/ContactCta";
 import { pages } from "@/content/pages";
 import { isPublished, previewTarget, unpublished } from "@/content/visibility";
 import { getDictionary, hasLocale, locales, type Locale } from "@/dictionaries";
+import { alternatesFor } from "@/lib/seo";
 
 
 export const dynamicParams = false;
@@ -29,14 +30,16 @@ async function resolve(params: PageProps<"/[lang]/[...slug]">["params"]) {
   const { lang, slug } = await params;
   const path = pathFor(slug);
   const page = path ? pages[path] : undefined;
-  if (!hasLocale(lang) || !page) notFound();
-  return { lang: lang as Locale, content: page[lang] };
+  if (!hasLocale(lang) || !path || !page) notFound();
+  return { lang: lang as Locale, path, isPreview: slug[0] === "preview", content: page[lang] };
 }
 
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/[...slug]">): Promise<Metadata> {
-  const { content } = await resolve(params);
-  return { title: `${content.meta.title} — Aurion`, description: content.meta.description };
+  const { lang, path, isPreview, content } = await resolve(params);
+  const title = `${content.meta.title} — Aurion`;
+  if (isPreview) return { title, robots: { index: false, follow: false } };
+  return { title, description: content.meta.description, alternates: alternatesFor(lang, path), openGraph: { title, description: content.meta.description } };
 }
 
 
