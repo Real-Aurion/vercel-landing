@@ -24,29 +24,64 @@
   padding: 20px 24px;
   overflow: hidden;
   border-radius: var(--radius);
-  background:
-    radial-gradient(circle at 88% 30%, color-mix(in srgb, var(--accent-bright) 85%, transparent), transparent 45%),
-    radial-gradient(circle at 70% 90%, color-mix(in srgb, var(--accent) 70%, transparent), transparent 50%),
-    linear-gradient(110deg, var(--accent-light) 30%, var(--accent-mist) 100%);
-  transition: box-shadow var(--transition);
+  background: var(--accent-strong);
+  color: var(--bg);
+  transition: background var(--transition);
 }
 
 
 .overview:hover {
-  box-shadow: inset 0 0 0 1px var(--accent);
+  background: var(--accent);
 }
 
 
 .overviewTitle {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
 
+.overviewArrow {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.4s ease;
+}
+
+
+.overview:hover .overviewArrow {
+  transform: translateX(4px);
+}
+
+
 .overviewDesc {
+  position: relative;
+  z-index: 1;
   font-size: 14px;
-  color: var(--text-secondary);
+  opacity: 0.75;
+}
+
+
+/* The logo mark, oversized and cropped by the card edge, stands in for the artwork Glean puts here. */
+.overviewMark {
+  position: absolute;
+  top: -18px;
+  right: -28px;
+  width: 150px;
+  height: auto;
+  opacity: 0.14;
+  transition: opacity 0.4s ease, transform 0.6s ease;
+}
+
+
+.overview:hover .overviewMark {
+  opacity: 0.22;
+  transform: translateX(-6px);
 }
 
 

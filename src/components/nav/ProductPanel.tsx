@@ -1,3 +1,5 @@
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { productMenu, type FoundationGroup, type ProductColumn } from "@/content/menu";
@@ -12,8 +14,12 @@ export function ProductPanel({ lang, menu, nav, onNavigate }: PanelProps) {
     <div className={styles.panel}>
       <div className={styles.platform}>
         <Link className={styles.overview} href={localHref(lang, overview.href)} onClick={onNavigate}>
-          <span className={styles.overviewTitle}>{menu.overview.title}</span>
+          <span className={styles.overviewTitle}>
+            {menu.overview.title}
+            <ArrowRightIcon className={styles.overviewArrow} strokeWidth={2} aria-hidden="true" />
+          </span>
           <span className={styles.overviewDesc}>{menu.overview.desc}</span>
+          <Image className={styles.overviewMark} src="/logos/aurion-mark-white.png" alt="" width={420} height={412} />
         </Link>
         <p className={styles.foundationLabel}>{menu.foundationLabel}</p>
         <div className={styles.foundation}>

@@ -233,7 +233,9 @@ All tokens live in `:root` in `src/app/globals.css`. They carry over from the Wo
 | `--bg-warm` | `#f7f5f2` | Mega-menu shell (the warm grey Glean uses) |
 | `--border` / `--border-light` | `#e2e8f0` / `#f1f5f9` | Dividers |
 
-Typeface: **Be Vietnam Pro** through `next/font/google` (latin + vietnamese subsets), exposed as `--font-sans`. The WordPress site used Manrope. The switch follows the template above and gives better Vietnamese diacritics.
+Typeface: **Manrope** through `next/font/google` (latin, latin-ext, vietnamese), exposed as `--font-sans`. It is the aurion.technology font. **Lam chose it over the template's Be Vietnam Pro, and it overrides the Typography rule above.**
+
+Buttons use `--radius-button` (10px), the same as WordPress. Pills (the dock, hero feature pills, overlines) stay fully round.
 
 ### Breakpoints (mobile-first)
 
@@ -242,15 +244,20 @@ The Landing Pages table above is written as max-width. In code we write it mobil
 ### Bilingual (VI / EN)
 
 - **Vietnamese is the default.** `/` redirects to `/vi` in `src/proxy.ts`. Browser language is ignored on purpose.
-- Every route lives under `src/app/[lang]/`. The copy lives in **one** place: `src/dictionaries/vi.json` and `en.json`. There is no runtime text swapping and no inline fallback copy (the WordPress site's three-source problem is gone).
-- `en.json` is type-checked against `vi.json`, so a missing key fails the build. Add every string to both files in the same change.
+- Every route lives under `src/app/[lang]/`. There is no runtime text swapping and no inline fallback copy (the WordPress site's three-source problem is gone).
+- **UI copy** (nav, menu, home sections, footer) lives in `src/dictionaries/vi.json` and `en.json`. `en.json` is type-checked against `vi.json`, so a missing key fails the build.
+- **Page content** lives in `src/content/pages/*.ts`, with `vi` and `en` side by side in one object. Add a page by registering it in `src/content/pages/index.ts`, and the catch-all route `src/app/[lang]/[...slug]` publishes it. Pages are made of typed blocks (`features`, `metrics`, `steps`, `links`, `notice`) rendered by `src/components/page/Blocks.tsx`.
+- Change a string in both languages in the same commit.
 - Internal links go through `localHref(lang, "/path")` from `src/lib/href.ts`.
 
 ### Navigation / mega menu
 
 - Menu **structure** (ids, hrefs, icons, grouping) lives in `src/content/menu.ts`. Menu **copy** lives in the dictionaries under `menu.*`.
-- Desktop behaviour: open on hover or click, 140ms close grace period, Esc closes, the page behind dims and blurs.
-- Mobile behaviour: a full-screen drawer with one `<details>` accordion per top-level item.
+- The nav is the WordPress **floating dock**: a centred pill, fixed near the top, that slides away when you scroll down and returns when you scroll up (always shown within 80px of the top). The logic is in `useHideOnScrollDown.ts`.
+- Desktop: the mega menu opens under the dock on hover or click, with a 140ms close grace period. Esc closes it, and the page behind dims and blurs.
+- Mobile: the dock grows downward into a card with one `<details>` accordion per top-level item (no full-screen overlay).
+- Language switch: the VN / UK flags from the WordPress site (`LanguageFlags.tsx`).
+- Feature links in the menu jump to a card on their parent page (`/platform#ocr`). The target card highlights itself with `:target`.
 - The design is modelled on Glean. See `DESIGN_REFERENCE.md` before you change the panel layout.
 
 ### Versioning

@@ -52,5 +52,14 @@ Where the drafts live: structure in `src/content/menu.ts`, copy in `src/dictiona
 - [ ] Draft: About, Values, Careers, Contact. Are we hiring (is a Careers page worth having)? Do we show the team page again? It's hidden on the WordPress site.
 - [ ] Press / news, and the legal pages (privacy, terms)?
 
+## Page content (drafts now live on the site)
+- [ ] **Customers:** what exactly did we build at Nhi Đồng 1 and 115? Any results we can publish, and a quote from someone at the hospital? Written permission to name them and show their logos?
+- [ ] **Security:** are HIPAA, BAA and SOC 2 Type II true today? Where is data stored (in Vietnam, on-prem at the hospital, or in the cloud)? Do we comply with Decree 13/2023?
+- [ ] **About:** the founding story, founding year, founders? Should the team grid come back (it's hidden on WordPress)?
+- [ ] **Careers:** any open roles? Is the CV email the same as the contact email?
+- [ ] **Blog:** will posts arrive soon, or should we hide Blog from the menu until they do?
+- [ ] **Assistant:** does it really answer "with sources" (citations)? Which languages does it support?
+- [ ] **Operations:** is surgery scheduling a product, or only the 115 project? Are patient flow and lab automation live anywhere?
+
 ## Numbers used on the homepage
 - [ ] The impact metrics (3×, 98%, 40%, 2×, 5×) come from the WordPress site. Are they measured results we can stand behind?

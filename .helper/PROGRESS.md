@@ -1,27 +1,29 @@
 # Aurion Landing (Next.js) — Progress
 
-The new marketing site for Aurion, a healthcare-tech company building clinical intelligence infrastructure in Asia-Pacific. It replaces the one-page WordPress theme (`~/projects/Aurion/landing_page_wp`, live at aurion.health) and grows into a multi-page site modelled on glean.com. Bilingual, Vietnamese by default.
+The new marketing site for Aurion, a healthcare-tech company building clinical intelligence infrastructure in Asia-Pacific. It replaces the one-page WordPress theme (`~/projects/Aurion/landing_page_wp`, live at aurion.health / aurion.technology) and grows into a multi-page site modelled on glean.com. Bilingual, Vietnamese by default.
 
 **Stack**: Next.js 16 (App Router) · React 19 · TypeScript · plain CSS Modules · pnpm · Vercel
-**Repo**: github.com/Real-Aurion/vercel-landing (private, default branch `vercel`) · **Version**: 0.1.1
+**Repo**: github.com/Real-Aurion/vercel-landing (private, default branch `vercel`) · **Version**: 0.1.2
 
 ## What's built
 
-- `/` redirects to `/vi`. `/vi` and `/en` are statically generated
-- Glean-style mega menu under "Product": platform tree, two product columns, coming-soon strip. Simpler icon-grid panels for Solutions, Customers, Resources and Company. Full-screen accordion drawer on mobile
-- Home page ported from WordPress: hero, partner logos (Nhi Đồng 1, 115), "What We Do" tabs with metrics, FAQ, contact CTA, footer
-- Design tokens, typography and component rules in `CODE_STYLE.md`. Glean design notes in `DESIGN_REFERENCE.md`
+- `/` redirects to `/vi`. Every page is statically generated in both languages (34 routes)
+- Floating dock nav carried over from WordPress: hides on scroll down, returns on scroll up, VN / UK flag switch. The Glean-style Product mega menu opens under it; the other menus use icon-grid panels. On mobile the dock grows into an accordion card
+- "Platform overview" card in the menu is solid teal with the cropped Aurion mark (Lam rejected the gradient)
+- Home page: hero (one-line title on desktop), partner logos, "What We Do" tabs, FAQ, contact CTA, footer
+- 14 content pages behind the menu: platform, 3 products (Insights is "coming soon"), 3 solutions, customers + 2 case studies, about (with values), careers, security, blog ("coming soon")
+- Font is Manrope (from aurion.technology). Buttons use a 10px radius
 
 ## Key decisions & gotchas
 
-- **All menu content is a draft.** Menu links point at pages that don't exist yet, so they 404 until built. Answers needed first: `MENU_QUESTIONS.md`
-- Copy has one source: `src/dictionaries/{vi,en}.json`. `en` is type-checked against `vi`, so a missing key fails the build
-- Font changed from Manrope (WordPress) to Be Vietnam Pro, per the shared template
-- The contact CTA is a `mailto:` for now; there is no form backend yet. The WordPress site shows `hello@aurion.health` but sends mail from `@aurion.technology`. Confirm which is canonical (`src/lib/contact.ts`)
-- The WordPress FAQ claims HIPAA and SOC 2 Type II. Those claims were copied over unchanged; verify them before launch
-- Not yet connected to a Vercel project, and no domain
+- **All page and menu copy is a draft** written from the WordPress copy and the Jira project names. It is waiting on Lam's answers in `MENU_QUESTIONS.md`
+- Case studies say what we're building at Nhi Đồng 1 (knowledge assistant + CDR) and 115 (surgery schedule), with no metrics or quotes, until permission is confirmed
+- The security page repeats the WordPress FAQ's HIPAA / BAA / encryption claims. These need verifying before launch
+- Metrics (3×, 98%, 40%, 2×, 5×) come from WordPress. They also appear on the solutions and operations pages
+- The contact CTA is a `mailto:`; there's no form backend yet. The contact email (`hello@aurion.health` or `@aurion.technology`) is unconfirmed: `src/lib/contact.ts`
+- Vercel project not created yet (Lam is importing it from the dashboard, team `slawdawg`, Hobby plan)
 
 ## Next
 
-- Go through `MENU_QUESTIONS.md` with Lam
-- Phase plan: `PLAN.md`
+- Lam answers the questions in `MENU_QUESTIONS.md`, then swap drafts for real copy
+- Contact form (Phase 5 in `PLAN.md`)

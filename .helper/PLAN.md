@@ -1,5 +1,10 @@
 # Plan
 
+## Phase 1b: Look & feel from the old site (complete)
+- Floating dock nav that hides on scroll down and returns on scroll up
+- Manrope font, 10px button corners, and the VN / UK flag language switch from WordPress
+- Hero title on one line on desktop; solid teal overview card in the menu
+
 ## Phase 1: Kickstart (complete)
 - New Next.js site with Vietnamese and English routes, Vietnamese by default
 - Aurion brand colours, type and spacing carried over from WordPress into shared tokens
@@ -15,13 +20,12 @@
 - [ ] Create the Vercel project from the GitHub repo (preview deploys on every push)
 - [ ] Point a staging subdomain at it; keep aurion.health on WordPress until launch
 
-## Phase 4: Pages behind the menu
-- [ ] Platform overview page
-- [ ] One page per product (Assistant, Operations, …)
-- [ ] Solutions pages (hospitals, labs, research)
-- [ ] Customer case studies (Nhi Đồng 1, 115)
-- [ ] About, values, careers, security & compliance
-- [ ] Shared page building blocks: page hero, feature grid, metric strip, logo row, quote
+## Phase 4: Pages behind the menu (drafts complete)
+- Every menu link now leads to a real page, in Vietnamese and English
+- Pages are assembled from shared blocks (feature cards, metrics, steps, link cards, notices), so new pages need only content
+- Menu feature links jump to, and highlight, the matching card on their product page
+- [ ] Replace draft copy with Lam's answers (`MENU_QUESTIONS.md`)
+- [ ] Add a quote block and a logo-row block once case studies have real content
 
 ## Phase 5: Contact & content
 - [ ] Contact form with a server action and an email provider (e.g. Resend), plus a bilingual confirmation email like WordPress sends

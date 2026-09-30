@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 96px 0 88px;
+  padding: calc(var(--page-top) + 56px) 0 88px;
   text-align: center;
 }
 
@@ -26,9 +26,9 @@
 
 
 .heading {
-  max-width: 880px;
   font-size: clamp(2.25rem, 6vw, 4rem);
-  line-height: 1.12;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
 }
 
 
@@ -95,6 +95,12 @@
 
 @media (min-width: 1025px) {
   .hero {
-    padding: 136px 0 112px;
+    padding: 176px 0 112px;
+  }
+
+  /* One line on desktop: the size tracks the viewport so the title always fits the container. */
+  .heading {
+    font-size: min(4.2vw, 4rem);
+    white-space: nowrap;
   }
 }
