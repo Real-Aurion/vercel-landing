@@ -196,7 +196,7 @@
     "items": [
       {
         "question": "How long does implementation typically take?",
-        "answer": "Implementation timelines vary by project scope. Most integrations are completed in 8-12 weeks, with phased rollouts for larger organizations. We work closely with your team to minimize disruption."
+        "answer": "It depends on the project's scope and the hospital's existing systems. We start with an assessment, then plan a phased rollout with the hospital so daily work is not disrupted."
       },
       {
         "question": "Where is our data stored?",

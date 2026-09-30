@@ -188,16 +188,6 @@ export const operations: LocalizedPage = {
         ],
       },
       {
-        type: "stats",
-        overline: "Hiệu quả",
-        heading: "Kết quả tại các dự án",
-        items: [
-          { value: "40%", label: "Giảm khối lượng công việc hành chính" },
-          { value: "2×", label: "Năng suất tiếp nhận bệnh nhân" },
-          { value: "3×", label: "Xử lý mẫu xét nghiệm nhanh hơn" },
-        ],
-      },
-      {
         type: "links",
         overline: "Tìm hiểu thêm",
         heading: "Operations trong thực tế",
@@ -256,16 +246,6 @@ export const operations: LocalizedPage = {
         items: [
           { id: "lab", icon: "beaker", status: "available", title: "Lab automation", desc: "Automates the path from sample intake to reported result, with fewer manual steps." },
           { id: "research", icon: "chart", status: "available", title: "Research data pipelines", desc: "Prepares structured, de-identified datasets for clinical research." },
-        ],
-      },
-      {
-        type: "stats",
-        overline: "Results",
-        heading: "Results from our projects",
-        items: [
-          { value: "40%", label: "Less administrative work" },
-          { value: "2×", label: "Patient throughput" },
-          { value: "3×", label: "Faster sample processing" },
         ],
       },
       {

@@ -3,6 +3,7 @@ import { JetBrains_Mono, Manrope } from "next/font/google";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/nav/Header";
+import { ScrollReset } from "@/components/ScrollReset";
 import { getDictionary, hasLocale, locales } from "@/dictionaries";
 import "../globals.css";
 
@@ -40,6 +41,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   return (
     <html lang={lang} className={`${manrope.variable} ${mono.variable}`}>
       <body>
+        <ScrollReset />
         <Header lang={lang} dict={dict} />
         <main className="rails">{children}</main>
         <Footer lang={lang} dict={dict} />

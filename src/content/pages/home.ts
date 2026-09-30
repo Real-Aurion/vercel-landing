@@ -31,17 +31,6 @@ export const homeBlocks: Record<Locale, Block[]> = {
       points: ["Kết nối HIS", "Kho dữ liệu lâm sàng", "Dữ liệu không rời khỏi bệnh viện"],
       visual: "cdr",
     },
-    {
-      type: "stats",
-      overline: "Aurion trong con số",
-      heading: "Kết quả đo được tại các dự án",
-      items: [
-        { value: "40%", label: "Giảm khối lượng công việc hành chính" },
-        { value: "3×", label: "Xử lý mẫu xét nghiệm nhanh hơn" },
-        { value: "98%", label: "Độ chính xác trích xuất dữ liệu" },
-        { value: "100%", label: "Dữ liệu lưu tại Việt Nam" },
-      ],
-    },
   ],
   en: [
     {
@@ -70,17 +59,6 @@ export const homeBlocks: Record<Locale, Block[]> = {
       body: "Clinical Context connects the HIS, the clinical data repository brings data together, and everything runs on-premise on the hospital's own servers in Vietnam.",
       points: ["HIS integration", "Clinical data repository", "Data never leaves the hospital"],
       visual: "cdr",
-    },
-    {
-      type: "stats",
-      overline: "Aurion in numbers",
-      heading: "Measured results from our projects",
-      items: [
-        { value: "40%", label: "Less administrative work" },
-        { value: "3×", label: "Faster lab sample processing" },
-        { value: "98%", label: "Data extraction accuracy" },
-        { value: "100%", label: "Of data stored in Vietnam" },
-      ],
     },
   ],
 };

@@ -40,12 +40,16 @@ export function SiteNav({ lang, nav, menu }: Props) {
     cancelClose();
     setOpenId(id);
   };
+  const goHome = () => {
+    closeAll();
+    if (window.location.pathname === `/${lang}`) window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   useEscapeToClose(openId !== null || mobileOpen, closeAll);
   return (
     <>
       <header className={styles.dock} data-hidden={hidden} data-expanded={mobileOpen} onMouseLeave={scheduleClose}>
         <nav className={styles.bar} aria-label="Main">
-          <Link className={styles.brand} href={`/${lang}`} onClick={closeAll}>
+          <Link className={styles.brand} href={`/${lang}`} onClick={goHome}>
             <Image src="/logos/aurion-mark.png" alt="" width={28} height={28} priority />
             <span>Aurion</span>
           </Link>

@@ -196,7 +196,7 @@
     "items": [
       {
         "question": "Thời gian triển khai thường mất bao lâu?",
-        "answer": "Thời gian triển khai tùy thuộc vào quy mô dự án. Phần lớn các hệ thống được tích hợp trong 8-12 tuần, với lộ trình triển khai theo giai đoạn cho các tổ chức lớn. Chúng tôi phối hợp chặt chẽ với đội ngũ của bạn để đảm bảo quá trình chuyển đổi diễn ra suôn sẻ."
+        "answer": "Thời gian triển khai phụ thuộc vào quy mô dự án và hệ thống sẵn có của bệnh viện. Chúng tôi khảo sát trước, sau đó cùng bệnh viện lập lộ trình triển khai theo từng giai đoạn để công việc hằng ngày không bị gián đoạn."
       },
       {
         "question": "Dữ liệu được lưu trữ ở đâu?",

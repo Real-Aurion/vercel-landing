@@ -251,7 +251,6 @@ The Landing Pages table above is written as max-width. In code we write it mobil
 - **Page content** lives in `src/content/pages/*.ts`, with `vi` and `en` side by side in one object. Add a page by registering it in `src/content/pages/index.ts`, and the catch-all route `src/app/[lang]/[...slug]` publishes it. Pages are made of typed blocks rendered by `src/components/page/Blocks.tsx`:
   - `grid`: a sticky heading beside a joined card grid
   - `split`: text beside a mockup; `reverse` flips the sides
-  - `stats`: the dark number band
   - `steps`, `links`, `logos` and `notice`
 - Features carry a `status`: `live` (running at a hospital, shown with a green pulsing badge) or `available` (Aurion can build it on request). **Never mark something `live` unless Lam has confirmed it.**
 - Mockups live in `src/components/visuals/` and are referenced by name (`visual: "calendar"`). Each has its own `vi` / `en` copy object. Add new ones to the registry in `Visual.tsx`.

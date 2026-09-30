@@ -62,7 +62,7 @@ Where the drafts live: structure in `src/content/menu.ts`, copy in `src/dictiona
 - [ ] **Operations:** is surgery scheduling a product, or only the 115 project? Are patient flow and lab automation live anywhere?
 
 ## Still open
-- [ ] Is the FAQ's "8–12 weeks to implement" accurate?
+- [x] Implementation timeline: removed from the FAQ (too early to say)
 - [ ] Should careers mail go to a different address from `shanlin@aurion.technology`?
 - [ ] Do we have written permission from the hospitals to publish project details (logos are OK)?
 

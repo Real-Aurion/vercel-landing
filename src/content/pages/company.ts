@@ -12,15 +12,6 @@ export const about: LocalizedPage = {
     },
     blocks: [
       {
-        type: "stats",
-        overline: "Aurion hôm nay",
-        items: [
-          { value: "2025", label: "Năm thành lập, tại Thành phố Hồ Chí Minh" },
-          { value: "2", label: "Bệnh viện đối tác hàng đầu" },
-          { value: "100%", label: "Dữ liệu lưu tại Việt Nam" },
-        ],
-      },
-      {
         type: "split",
         overline: "Sứ mệnh",
         heading: "Số hóa y tế Việt Nam, từ bên trong bệnh viện",
@@ -62,15 +53,6 @@ export const about: LocalizedPage = {
       lead: "Aurion is building Asia-Pacific clinical intelligence infrastructure, transforming raw medical data into continuously learning AI engines that improve hospital operational efficiency, lab throughput and research outcomes.",
     },
     blocks: [
-      {
-        type: "stats",
-        overline: "Aurion today",
-        items: [
-          { value: "2025", label: "Founded, in Ho Chi Minh City" },
-          { value: "2", label: "Leading partner hospitals" },
-          { value: "100%", label: "Of data stored in Vietnam" },
-        ],
-      },
       {
         type: "split",
         overline: "Mission",
@@ -191,13 +173,6 @@ export const security: LocalizedPage = {
           { icon: "shield", title: "AI chạy tại chỗ", desc: "Mô hình AI chạy trong hạ tầng bệnh viện, không gửi dữ liệu bệnh nhân ra ngoài." },
         ],
       },
-      {
-        type: "stats",
-        items: [
-          { value: "100%", label: "Dữ liệu lưu tại Việt Nam" },
-          { value: "0", label: "Bản ghi bệnh nhân gửi ra ngoài bệnh viện" },
-        ],
-      },
     ],
   },
   en: {
@@ -220,13 +195,6 @@ export const security: LocalizedPage = {
           { icon: "document", title: "Access logs", desc: "Every access and action is recorded for review." },
           { icon: "eyeSlash", title: "De-identification", desc: "Identifying information is removed before data is used for research." },
           { icon: "shield", title: "AI runs locally", desc: "AI models run inside the hospital; patient data is never sent out." },
-        ],
-      },
-      {
-        type: "stats",
-        items: [
-          { value: "100%", label: "Of data stored in Vietnam" },
-          { value: "0", label: "Patient records sent outside the hospital" },
         ],
       },
     ],

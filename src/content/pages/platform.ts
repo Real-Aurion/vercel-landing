@@ -74,16 +74,6 @@ export const platform: LocalizedPage = {
         visual: "ocr",
       },
       {
-        type: "stats",
-        overline: "Aurion trong con số",
-        heading: "Kết quả đo được tại các dự án",
-        items: [
-          { value: "100%", label: "Dữ liệu lưu trữ tại Việt Nam, trên máy chủ của bệnh viện" },
-          { value: "3×", label: "Xử lý mẫu xét nghiệm nhanh hơn" },
-          { value: "98%", label: "Độ chính xác trích xuất dữ liệu" },
-        ],
-      },
-      {
         type: "split",
         id: "protect",
         overline: "Aurion Protect",
@@ -175,16 +165,6 @@ export const platform: LocalizedPage = {
           "Usage monitored and limited per department",
         ],
         visual: "ocr",
-      },
-      {
-        type: "stats",
-        overline: "Aurion in numbers",
-        heading: "Measured results from our projects",
-        items: [
-          { value: "100%", label: "Of data stored in Vietnam, on the hospital's own servers" },
-          { value: "3×", label: "Faster lab sample processing" },
-          { value: "98%", label: "Data extraction accuracy" },
-        ],
       },
       {
         type: "split",

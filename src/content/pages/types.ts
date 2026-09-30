@@ -20,7 +20,6 @@ export type LinkItem = { icon: IconName; title: string; desc: string; href: stri
 export type Block =
   | { type: "grid"; id?: string; overline?: string; heading: string; lead?: string; items: FeatureItem[] }
   | { type: "split"; id?: string; overline: string; heading: string; body: string; points?: string[]; visual: VisualName; status?: Status; reverse?: boolean }
-  | { type: "stats"; overline?: string; heading?: string; items: { value: string; label: string }[] }
   | { type: "steps"; overline?: string; heading: string; items: { title: string; desc: string }[] }
   | { type: "links"; overline?: string; heading: string; items: LinkItem[] }
   | { type: "logos"; heading: string }

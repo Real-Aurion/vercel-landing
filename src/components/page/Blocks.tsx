@@ -30,7 +30,6 @@ function BlockBody({ block, lang, dict }: { block: Block; lang: Locale; dict: Di
   switch (block.type) {
     case "grid": return <Grid block={block} dict={dict} />;
     case "split": return <Split block={block} lang={lang} dict={dict} />;
-    case "stats": return <Stats block={block} />;
     case "steps": return <Steps block={block} />;
     case "links": return <Links block={block} lang={lang} />;
     case "logos": return <Partners customers={{ ...dict.customers, heading: block.heading }} bare />;
@@ -97,28 +96,6 @@ function Split({ block, lang, dict }: { block: BlockOf<"split">; lang: Locale; d
         <Visual name={block.visual} lang={lang} />
       </div>
     </div>
-  );
-}
-
-
-function Stats({ block }: { block: BlockOf<"stats"> }) {
-  return (
-    <>
-      {(block.overline || block.heading) && (
-        <div className={styles.statsHead}>
-          {block.overline && <span className="overline">{block.overline}</span>}
-          {block.heading && <h2 className={styles.heading}>{block.heading}</h2>}
-        </div>
-      )}
-      <ul className={styles.stats}>
-        {block.items.map((item) => (
-          <li key={item.label} className={styles.stat}>
-            <span className={styles.statValue}>{item.value}</span>
-            <span className={styles.statLabel}>{item.label}</span>
-          </li>
-        ))}
-      </ul>
-    </>
   );
 }
 

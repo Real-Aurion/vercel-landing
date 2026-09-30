@@ -43,15 +43,6 @@ export const hospitals: LocalizedPage = {
         visual: "calendar",
       },
       {
-        type: "stats",
-        overline: "Hiệu quả",
-        items: [
-          { value: "40%", label: "Giảm khối lượng công việc hành chính" },
-          { value: "2×", label: "Năng suất tiếp nhận bệnh nhân" },
-          { value: "100%", label: "Dữ liệu lưu tại bệnh viện ở Việt Nam" },
-        ],
-      },
-      {
         type: "links",
         overline: "Tìm hiểu thêm",
         heading: "Sản phẩm liên quan",
@@ -104,15 +95,6 @@ export const hospitals: LocalizedPage = {
         visual: "calendar",
       },
       {
-        type: "stats",
-        overline: "Results",
-        items: [
-          { value: "40%", label: "Less administrative work" },
-          { value: "2×", label: "Patient throughput" },
-          { value: "100%", label: "Of data kept inside the hospital, in Vietnam" },
-        ],
-      },
-      {
         type: "links",
         overline: "Learn more",
         heading: "Related products",
@@ -137,14 +119,6 @@ export const labs: LocalizedPage = {
       visual: "ocr",
     },
     blocks: [
-      {
-        type: "stats",
-        overline: "Hiệu quả",
-        items: [
-          { value: "3×", label: "Xử lý mẫu nhanh hơn" },
-          { value: "98%", label: "Độ chính xác trích xuất dữ liệu" },
-        ],
-      },
       {
         type: "grid",
         overline: "Aurion hỗ trợ",
@@ -186,14 +160,6 @@ export const labs: LocalizedPage = {
       visual: "ocr",
     },
     blocks: [
-      {
-        type: "stats",
-        overline: "Results",
-        items: [
-          { value: "3×", label: "Faster sample processing" },
-          { value: "98%", label: "Data extraction accuracy" },
-        ],
-      },
       {
         type: "grid",
         overline: "How Aurion helps",
@@ -240,14 +206,6 @@ export const research: LocalizedPage = {
     },
     blocks: [
       {
-        type: "stats",
-        overline: "Hiệu quả",
-        items: [
-          { value: "5×", label: "Chuẩn bị dữ liệu nhanh hơn" },
-          { value: "ML", label: "Công cụ phân tích chuyên sâu" },
-        ],
-      },
-      {
         type: "grid",
         overline: "Aurion hỗ trợ",
         heading: "Dữ liệu sạch, sẵn sàng cho nghiên cứu",
@@ -288,14 +246,6 @@ export const research: LocalizedPage = {
       visual: "dataset",
     },
     blocks: [
-      {
-        type: "stats",
-        overline: "Results",
-        items: [
-          { value: "5×", label: "Faster dataset preparation" },
-          { value: "ML", label: "Powered insights engine" },
-        ],
-      },
       {
         type: "grid",
         overline: "How Aurion helps",
