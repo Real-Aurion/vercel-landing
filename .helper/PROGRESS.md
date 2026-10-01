@@ -49,6 +49,12 @@ The new marketing site for Aurion, a healthcare-tech company (founded 2025, Ho C
 - `ScrollReset.tsx` does the scrolling on page changes (to the top, or to the `#hash` target). Next's built-in scroll didn't fire under the fixed dock, so the logo landed mid-page. Keep it when touching navigation
 - The FAQ no longer quotes an implementation timeline (Lam: too early to say)
 
+## Session 2026-10-01 changes
+
+- **Mobile nav fixes**: hamburger was overflowing outside the dock pill — fixed by hiding the CTA button on mobile with `!important` (global `.button` class was overriding `display:none`), reduced bar gap to 8px and adjusted padding. Mobile drawer made more compact: 2-column grid for sub-links, tighter summary padding, smaller font/min-height
+- **Hero pills removed**: "Nghiên cứu / OCR & Machine Learning" and "Vận hành / Huấn luyện AI & Tự động hóa" feature pills removed from the hero section and both dictionaries
+- **Security page — compliance section**: Added "Tuân thủ pháp lý & tiêu chuẩn" / "Regulatory compliance" grid block to `/security`, listing Công văn 365/TTYQG-GPQLCL-2025 (Vietnam MOH EMR technical requirements) and HIPAA as an international benchmark. Compliance section appears *above* the "Bảo mật theo thiết kế" section
+
 ## Next
 
 - Real product screenshots or photos from Lam (see `MENU_QUESTIONS.md` → Assets)
