@@ -19,7 +19,7 @@
 /* Grows the dock downward like the WordPress menu did, instead of covering the page. */
 .drawer {
   max-height: calc(100svh - var(--dock-height) - 4 * var(--dock-top));
-  padding: 4px 20px 20px;
+  padding: 2px 16px 16px;
   overflow-y: auto;
   animation: drawer-in 0.4s ease;
 }
@@ -47,8 +47,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
-  font-size: 16px;
+  padding: 10px 0;
+  font-size: 15px;
   font-weight: 600;
   list-style: none;
   cursor: pointer;
@@ -74,10 +74,10 @@
 
 
 .links {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin: 0;
-  padding: 0 0 12px;
+  padding: 0 0 8px;
   list-style: none;
 }
 
@@ -85,9 +85,9 @@
 .link {
   display: flex;
   align-items: center;
-  gap: 12px;
-  min-height: 44px;
-  font-size: 15px;
+  gap: 10px;
+  min-height: 36px;
+  font-size: 14px;
   color: var(--text-secondary);
 }
 
@@ -102,7 +102,7 @@
 
 .cta {
   width: 100%;
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 
