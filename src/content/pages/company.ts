@@ -162,19 +162,6 @@ export const security: LocalizedPage = {
     blocks: [
       {
         type: "grid",
-        overline: "Cách chúng tôi bảo vệ dữ liệu",
-        heading: "Bảo mật theo thiết kế",
-        items: [
-          { icon: "building", title: "On-premise tại bệnh viện", desc: "Toàn bộ hệ thống chạy trên máy chủ của bệnh viện, dữ liệu lưu trữ tại Việt Nam." },
-          { icon: "lock", title: "Mã hóa dữ liệu", desc: "Dữ liệu được mã hóa khi truyền và khi lưu trữ." },
-          { icon: "users", title: "Phân quyền theo vai trò", desc: "Mỗi người dùng và mỗi mô hình AI chỉ truy cập đúng phần dữ liệu được phép." },
-          { icon: "document", title: "Nhật ký truy cập", desc: "Mọi truy cập và thao tác đều được ghi lại để kiểm tra khi cần." },
-          { icon: "eyeSlash", title: "Ẩn danh hóa", desc: "Thông tin định danh được loại bỏ trước khi dữ liệu dùng cho nghiên cứu." },
-          { icon: "shield", title: "AI chạy tại chỗ", desc: "Mô hình AI chạy trong hạ tầng bệnh viện, không gửi dữ liệu bệnh nhân ra ngoài." },
-        ],
-      },
-      {
-        type: "grid",
         overline: "Tuân thủ pháp lý & tiêu chuẩn",
         heading: "Xây dựng đúng theo quy định",
         lead: "Aurion được thiết kế theo các yêu cầu kỹ thuật và tiêu chuẩn bảo mật y tế hiện hành.",
@@ -191,6 +178,19 @@ export const security: LocalizedPage = {
           },
         ],
       },
+      {
+        type: "grid",
+        overline: "Cách chúng tôi bảo vệ dữ liệu",
+        heading: "Bảo mật theo thiết kế",
+        items: [
+          { icon: "building", title: "On-premise tại bệnh viện", desc: "Toàn bộ hệ thống chạy trên máy chủ của bệnh viện, dữ liệu lưu trữ tại Việt Nam." },
+          { icon: "lock", title: "Mã hóa dữ liệu", desc: "Dữ liệu được mã hóa khi truyền và khi lưu trữ." },
+          { icon: "users", title: "Phân quyền theo vai trò", desc: "Mỗi người dùng và mỗi mô hình AI chỉ truy cập đúng phần dữ liệu được phép." },
+          { icon: "document", title: "Nhật ký truy cập", desc: "Mọi truy cập và thao tác đều được ghi lại để kiểm tra khi cần." },
+          { icon: "eyeSlash", title: "Ẩn danh hóa", desc: "Thông tin định danh được loại bỏ trước khi dữ liệu dùng cho nghiên cứu." },
+          { icon: "shield", title: "AI chạy tại chỗ", desc: "Mô hình AI chạy trong hạ tầng bệnh viện, không gửi dữ liệu bệnh nhân ra ngoài." },
+        ],
+      },
     ],
   },
   en: {
@@ -202,19 +202,6 @@ export const security: LocalizedPage = {
       visual: "onPrem",
     },
     blocks: [
-      {
-        type: "grid",
-        overline: "How we protect data",
-        heading: "Secure by design",
-        items: [
-          { icon: "building", title: "On-premise at the hospital", desc: "The whole system runs on the hospital's servers, with data stored in Vietnam." },
-          { icon: "lock", title: "Encryption", desc: "Data is encrypted in transit and at rest." },
-          { icon: "users", title: "Role-based access", desc: "Every user and every AI model reaches only the data it is allowed to." },
-          { icon: "document", title: "Access logs", desc: "Every access and action is recorded for review." },
-          { icon: "eyeSlash", title: "De-identification", desc: "Identifying information is removed before data is used for research." },
-          { icon: "shield", title: "AI runs locally", desc: "AI models run inside the hospital; patient data is never sent out." },
-        ],
-      },
       {
         type: "grid",
         overline: "Regulatory compliance",
@@ -231,6 +218,19 @@ export const security: LocalizedPage = {
             title: "HIPAA",
             desc: "US standard for protecting personal health information — an international benchmark Aurion references in its security design.",
           },
+        ],
+      },
+      {
+        type: "grid",
+        overline: "How we protect data",
+        heading: "Secure by design",
+        items: [
+          { icon: "building", title: "On-premise at the hospital", desc: "The whole system runs on the hospital's servers, with data stored in Vietnam." },
+          { icon: "lock", title: "Encryption", desc: "Data is encrypted in transit and at rest." },
+          { icon: "users", title: "Role-based access", desc: "Every user and every AI model reaches only the data it is allowed to." },
+          { icon: "document", title: "Access logs", desc: "Every access and action is recorded for review." },
+          { icon: "eyeSlash", title: "De-identification", desc: "Identifying information is removed before data is used for research." },
+          { icon: "shield", title: "AI runs locally", desc: "AI models run inside the hospital; patient data is never sent out." },
         ],
       },
     ],
