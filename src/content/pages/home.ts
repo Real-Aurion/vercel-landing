@@ -7,7 +7,7 @@ export const homeBlocks: Record<Locale, Block[]> = {
     {
       type: "split",
       overline: "Aurion Assistant",
-      status: "live",
+      
       heading: "Trợ lý AI hiểu bệnh viện của bạn",
       body: "Tra cứu tri thức y khoa và soạn thảo hồ sơ bằng tiếng Việt. Mỗi câu trả lời đều dựa trên tài liệu của chính bệnh viện và kèm nguồn trích dẫn.",
       points: ["Tra cứu phác đồ và tài liệu nội bộ", "Bản nháp hồ sơ để bác sĩ duyệt", "Trả lời kèm nguồn trích dẫn"],
@@ -16,7 +16,7 @@ export const homeBlocks: Record<Locale, Block[]> = {
     {
       type: "split",
       overline: "Aurion Operations",
-      status: "live",
+      
       reverse: true,
       heading: "Phòng mổ và khoa phòng phối hợp như một đội",
       body: "Lịch phẫu thuật toàn quy trình và điều phối bệnh nhân: quét QR, giao diện theo vai trò, dời lịch và phân công ê-kíp trên một hệ thống.",
@@ -36,7 +36,7 @@ export const homeBlocks: Record<Locale, Block[]> = {
     {
       type: "split",
       overline: "Aurion Assistant",
-      status: "live",
+      
       heading: "An AI assistant that knows your hospital",
       body: "Medical knowledge search and clinical documentation in plain language. Every answer comes from the hospital's own documents, with citations.",
       points: ["Search guidelines and internal documents", "Draft documents for doctors to approve", "Answers with citations"],
@@ -45,7 +45,7 @@ export const homeBlocks: Record<Locale, Block[]> = {
     {
       type: "split",
       overline: "Aurion Operations",
-      status: "live",
+      
       reverse: true,
       heading: "Theatres and wards that work as one team",
       body: "End-to-end surgery scheduling and patient flow: QR scanning, role-based views, rescheduling and team assignment in one system.",

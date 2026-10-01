@@ -22,7 +22,7 @@ export const customers: LocalizedPage = {
       {
         type: "split",
         overline: "Bệnh viện Nhân dân 115",
-        status: "live",
+        
         reverse: true,
         heading: "Hệ thống lịch phẫu thuật toàn quy trình",
         body: "Từ quét QR xác nhận bệnh nhân, xếp và dời lịch mổ, đến phân công bác sĩ và điều dưỡng. Toàn bộ quy trình phẫu thuật nằm trên một hệ thống.",
@@ -61,7 +61,7 @@ export const customers: LocalizedPage = {
       {
         type: "split",
         overline: "People's Hospital 115",
-        status: "live",
+        
         reverse: true,
         heading: "An end-to-end surgery scheduling system",
         body: "From scanning a QR code to confirm the patient, to booking and moving surgeries, to assigning surgeons and nurses. The whole surgical workflow lives in one system.",
@@ -202,18 +202,18 @@ export const hospital115: LocalizedPage = {
         overline: "Tính năng",
         heading: "Mọi bước của ca mổ, trên một hệ thống",
         items: [
-          { icon: "calendar", status: "live", title: "Lịch phẫu thuật tổng", desc: "Một lịch chung cho mọi phòng mổ, cập nhật theo thời gian thực." },
-          { icon: "search", status: "live", title: "Quét QR", desc: "Quét QR vòng tay để xác nhận đúng bệnh nhân, đúng ca, đúng phòng." },
-          { icon: "users", status: "live", title: "Giao diện theo vai trò", desc: "Điều phối viên, bác sĩ và điều dưỡng mỗi người thấy đúng phần việc của mình." },
-          { icon: "adjustments", status: "live", title: "Dời lịch mổ", desc: "Dời ca mổ trong vài thao tác, mọi bên liên quan được cập nhật ngay." },
-          { icon: "heart", status: "live", title: "Phân công ê-kíp", desc: "Phân công bác sĩ và điều dưỡng cho từng ca mổ." },
+          { icon: "calendar", title: "Lịch phẫu thuật tổng", desc: "Một lịch chung cho mọi phòng mổ, cập nhật theo thời gian thực." },
+          { icon: "search", title: "Quét QR", desc: "Quét QR vòng tay để xác nhận đúng bệnh nhân, đúng ca, đúng phòng." },
+          { icon: "users", title: "Giao diện theo vai trò", desc: "Điều phối viên, bác sĩ và điều dưỡng mỗi người thấy đúng phần việc của mình." },
+          { icon: "adjustments", title: "Dời lịch mổ", desc: "Dời ca mổ trong vài thao tác, mọi bên liên quan được cập nhật ngay." },
+          { icon: "heart", title: "Phân công ê-kíp", desc: "Phân công bác sĩ và điều dưỡng cho từng ca mổ." },
           { icon: "sparkles", title: "Và còn nhiều hơn nữa", desc: "Hệ thống bao quát toàn bộ quy trình phẫu thuật của bệnh viện, với nhiều tính năng tiếp tục được bổ sung." },
         ],
       },
       {
         type: "split",
         overline: "Xác nhận bằng QR",
-        status: "live",
+        
         reverse: true,
         heading: "Đúng bệnh nhân, đúng phòng mổ, đúng giờ",
         body: "Điều dưỡng quét QR trên vòng tay bệnh nhân, hệ thống đối chiếu với lịch mổ và ê-kíp được phân công.",
@@ -237,18 +237,18 @@ export const hospital115: LocalizedPage = {
         overline: "Features",
         heading: "Every step of a surgery, in one system",
         items: [
-          { icon: "calendar", status: "live", title: "Master surgery schedule", desc: "One schedule for every theatre, updated in real time." },
-          { icon: "search", status: "live", title: "QR scanning", desc: "Scan the wristband QR to confirm the right patient, case and theatre." },
-          { icon: "users", status: "live", title: "Role-based views", desc: "Coordinators, surgeons and nurses each see exactly their part of the work." },
-          { icon: "adjustments", status: "live", title: "Moving surgeries", desc: "Move a case in a few taps and everyone involved is updated at once." },
-          { icon: "heart", status: "live", title: "Team assignment", desc: "Assign surgeons and nurses to every case." },
+          { icon: "calendar", title: "Master surgery schedule", desc: "One schedule for every theatre, updated in real time." },
+          { icon: "search", title: "QR scanning", desc: "Scan the wristband QR to confirm the right patient, case and theatre." },
+          { icon: "users", title: "Role-based views", desc: "Coordinators, surgeons and nurses each see exactly their part of the work." },
+          { icon: "adjustments", title: "Moving surgeries", desc: "Move a case in a few taps and everyone involved is updated at once." },
+          { icon: "heart", title: "Team assignment", desc: "Assign surgeons and nurses to every case." },
           { icon: "sparkles", title: "And much more", desc: "The system covers the hospital's whole surgical workflow, with more features still being added." },
         ],
       },
       {
         type: "split",
         overline: "QR confirmation",
-        status: "live",
+        
         reverse: true,
         heading: "Right patient, right theatre, right time",
         body: "Nurses scan the patient's wristband QR, and the system checks it against the schedule and the assigned team.",

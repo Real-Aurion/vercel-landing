@@ -19,7 +19,7 @@ export const platform: LocalizedPage = {
         type: "split",
         id: "context",
         overline: "Aurion Clinical Context",
-        status: "live",
+        
         heading: "Mọi dữ liệu lâm sàng, trong cùng một ngữ cảnh",
         body: "AI chỉ hữu ích khi hiểu đúng bối cảnh của bệnh viện. Clinical Context gom dữ liệu từ các hệ thống về một nơi, để mỗi câu trả lời và mỗi quy trình tự động đều dựa trên dữ liệu thật.",
         points: [
@@ -37,19 +37,19 @@ export const platform: LocalizedPage = {
         heading: "Mọi thứ AI y khoa cần, trên một nền tảng",
         lead: "Những thành phần đang vận hành tại bệnh viện, cùng các năng lực sẵn sàng triển khai khi bạn cần.",
         items: [
-          { id: "connectors", icon: "link", status: "live", title: "Kết nối HIS", desc: "Đồng bộ dữ liệu từ hệ thống thông tin bệnh viện vào nền tảng, liên tục và an toàn." },
-          { icon: "circleStack", status: "live", title: "Kho dữ liệu lâm sàng", desc: "Một nguồn dữ liệu thống nhất cho vận hành, AI và nghiên cứu." },
-          { id: "deidentification", icon: "eyeSlash", status: "available", title: "Ẩn danh hóa dữ liệu", desc: "Loại bỏ thông tin định danh trước khi dữ liệu được dùng cho nghiên cứu hoặc huấn luyện." },
-          { id: "models", icon: "cube", status: "available", title: "Kho mô hình", desc: "Lựa chọn và tinh chỉnh mô hình phù hợp cho từng tác vụ lâm sàng." },
-          { id: "ocr", icon: "document", status: "available", title: "OCR y khoa", desc: "Đọc phiếu xét nghiệm, hồ sơ giấy và tài liệu scan thành dữ liệu có cấu trúc." },
-          { id: "usage", icon: "adjustments", status: "available", title: "Kiểm soát sử dụng", desc: "Theo dõi và giới hạn cách AI được dùng ở từng khoa phòng." },
+          { id: "connectors", icon: "link", title: "Kết nối HIS", desc: "Đồng bộ dữ liệu từ hệ thống thông tin bệnh viện vào nền tảng, liên tục và an toàn." },
+          { icon: "circleStack", title: "Kho dữ liệu lâm sàng", desc: "Một nguồn dữ liệu thống nhất cho vận hành, AI và nghiên cứu." },
+          { id: "deidentification", icon: "eyeSlash", title: "Ẩn danh hóa dữ liệu", desc: "Loại bỏ thông tin định danh trước khi dữ liệu được dùng cho nghiên cứu hoặc huấn luyện." },
+          { id: "models", icon: "cube", title: "Kho mô hình", desc: "Lựa chọn và tinh chỉnh mô hình phù hợp cho từng tác vụ lâm sàng." },
+          { id: "ocr", icon: "document", title: "OCR y khoa", desc: "Đọc phiếu xét nghiệm, hồ sơ giấy và tài liệu scan thành dữ liệu có cấu trúc." },
+          { id: "usage", icon: "adjustments", title: "Kiểm soát sử dụng", desc: "Theo dõi và giới hạn cách AI được dùng ở từng khoa phòng." },
         ],
       },
       {
         type: "split",
         id: "cdr",
         overline: "Kho dữ liệu lâm sàng (CDR)",
-        status: "live",
+        
         reverse: true,
         heading: "Một nguồn dữ liệu đáng tin cậy",
         body: "Kho dữ liệu lâm sàng lưu trữ tập trung dữ liệu bệnh nhân, xét nghiệm và điều trị theo cấu trúc thống nhất, thay cho những bảng tính và hệ thống rời rạc.",
@@ -112,7 +112,7 @@ export const platform: LocalizedPage = {
         type: "split",
         id: "context",
         overline: "Aurion Clinical Context",
-        status: "live",
+        
         heading: "All clinical data, in one context",
         body: "AI is only useful when it understands the hospital it works in. Clinical Context brings data from the hospital's systems into one place, so every answer and every automated workflow is grounded in real records.",
         points: [
@@ -130,19 +130,19 @@ export const platform: LocalizedPage = {
         heading: "Everything medical AI needs, on one platform",
         lead: "Components running in hospitals today, plus capabilities ready to deploy when you need them.",
         items: [
-          { id: "connectors", icon: "link", status: "live", title: "HIS integration", desc: "Continuously and securely syncs data from the hospital information system." },
-          { icon: "circleStack", status: "live", title: "Clinical data repository", desc: "One consistent source of data for operations, AI and research." },
-          { id: "deidentification", icon: "eyeSlash", status: "available", title: "Data de-identification", desc: "Strips identifying information before data is used for research or training." },
-          { id: "models", icon: "cube", status: "available", title: "Model hub", desc: "The right model for each clinical task, tuned on the hospital's own data." },
-          { id: "ocr", icon: "document", status: "available", title: "Medical OCR", desc: "Turns lab slips, paper records and scans into structured data." },
-          { id: "usage", icon: "adjustments", status: "available", title: "Usage controls", desc: "Monitor and limit how AI is used in each department." },
+          { id: "connectors", icon: "link", title: "HIS integration", desc: "Continuously and securely syncs data from the hospital information system." },
+          { icon: "circleStack", title: "Clinical data repository", desc: "One consistent source of data for operations, AI and research." },
+          { id: "deidentification", icon: "eyeSlash", title: "Data de-identification", desc: "Strips identifying information before data is used for research or training." },
+          { id: "models", icon: "cube", title: "Model hub", desc: "The right model for each clinical task, tuned on the hospital's own data." },
+          { id: "ocr", icon: "document", title: "Medical OCR", desc: "Turns lab slips, paper records and scans into structured data." },
+          { id: "usage", icon: "adjustments", title: "Usage controls", desc: "Monitor and limit how AI is used in each department." },
         ],
       },
       {
         type: "split",
         id: "cdr",
         overline: "Clinical data repository (CDR)",
-        status: "live",
+        
         reverse: true,
         heading: "One source of clinical truth",
         body: "The clinical data repository keeps patient, lab and treatment data in one consistent structure, replacing scattered spreadsheets and disconnected systems.",

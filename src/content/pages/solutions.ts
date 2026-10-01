@@ -26,7 +26,7 @@ export const hospitals: LocalizedPage = {
       {
         type: "split",
         overline: "Aurion Assistant",
-        status: "live",
+        
         heading: "Tri thức của bệnh viện, trả lời trong vài giây",
         body: "Bác sĩ và điều dưỡng hỏi bằng tiếng Việt, Assistant trả lời từ phác đồ và tài liệu của chính bệnh viện, kèm nguồn trích dẫn.",
         points: ["Tra cứu tri thức y khoa", "Soạn thảo hồ sơ"],
@@ -35,7 +35,7 @@ export const hospitals: LocalizedPage = {
       {
         type: "split",
         overline: "Aurion Operations",
-        status: "live",
+        
         reverse: true,
         heading: "Phòng mổ vận hành như một đội",
         body: "Lịch phẫu thuật toàn quy trình, từ xếp lịch, phân công đến xác nhận bệnh nhân bằng QR.",
@@ -78,7 +78,7 @@ export const hospitals: LocalizedPage = {
       {
         type: "split",
         overline: "Aurion Assistant",
-        status: "live",
+        
         heading: "The hospital's knowledge, answered in seconds",
         body: "Doctors and nurses ask in plain language, and Assistant answers from the hospital's own guidelines and documents, with citations.",
         points: ["Medical knowledge search", "Clinical documentation"],
@@ -87,7 +87,7 @@ export const hospitals: LocalizedPage = {
       {
         type: "split",
         overline: "Aurion Operations",
-        status: "live",
+        
         reverse: true,
         heading: "Theatres that run like one team",
         body: "End-to-end surgery scheduling, from booking and team assignment to QR patient confirmation.",
@@ -124,10 +124,10 @@ export const labs: LocalizedPage = {
         overline: "Aurion hỗ trợ",
         heading: "Quy trình báo cáo tự động từ đầu đến cuối",
         items: [
-          { icon: "document", status: "available", title: "OCR phiếu xét nghiệm", desc: "Đọc phiếu giấy và tệp scan, chuyển thành dữ liệu có cấu trúc." },
-          { icon: "beaker", status: "available", title: "Tự động hóa quy trình", desc: "Giảm các bước nhập liệu lặp lại giữa máy xét nghiệm và hệ thống LIS." },
-          { icon: "shield", status: "available", title: "Kiểm soát chất lượng", desc: "Đánh dấu kết quả bất thường hoặc thiếu thông tin để kỹ thuật viên rà soát." },
-          { icon: "circleStack", status: "live", title: "Kho dữ liệu lâm sàng", desc: "Kết quả được lưu cùng hồ sơ bệnh nhân, sẵn sàng cho bác sĩ và nghiên cứu." },
+          { icon: "document", title: "OCR phiếu xét nghiệm", desc: "Đọc phiếu giấy và tệp scan, chuyển thành dữ liệu có cấu trúc." },
+          { icon: "beaker", title: "Tự động hóa quy trình", desc: "Giảm các bước nhập liệu lặp lại giữa máy xét nghiệm và hệ thống LIS." },
+          { icon: "shield", title: "Kiểm soát chất lượng", desc: "Đánh dấu kết quả bất thường hoặc thiếu thông tin để kỹ thuật viên rà soát." },
+          { icon: "circleStack", title: "Kho dữ liệu lâm sàng", desc: "Kết quả được lưu cùng hồ sơ bệnh nhân, sẵn sàng cho bác sĩ và nghiên cứu." },
         ],
       },
       {
@@ -165,10 +165,10 @@ export const labs: LocalizedPage = {
         overline: "How Aurion helps",
         heading: "An automated reporting pipeline, end to end",
         items: [
-          { icon: "document", status: "available", title: "Lab slip OCR", desc: "Reads paper slips and scans and turns them into structured data." },
-          { icon: "beaker", status: "available", title: "Workflow automation", desc: "Removes repeated data entry between analysers and the LIS." },
-          { icon: "shield", status: "available", title: "Quality checks", desc: "Flags abnormal or incomplete results for a technician to review." },
-          { icon: "circleStack", status: "live", title: "Clinical data repository", desc: "Results sit with the patient record, ready for doctors and research." },
+          { icon: "document", title: "Lab slip OCR", desc: "Reads paper slips and scans and turns them into structured data." },
+          { icon: "beaker", title: "Workflow automation", desc: "Removes repeated data entry between analysers and the LIS." },
+          { icon: "shield", title: "Quality checks", desc: "Flags abnormal or incomplete results for a technician to review." },
+          { icon: "circleStack", title: "Clinical data repository", desc: "Results sit with the patient record, ready for doctors and research." },
         ],
       },
       {
@@ -210,10 +210,10 @@ export const research: LocalizedPage = {
         overline: "Aurion hỗ trợ",
         heading: "Dữ liệu sạch, sẵn sàng cho nghiên cứu",
         items: [
-          { icon: "circleStack", status: "live", title: "Kho dữ liệu lâm sàng", desc: "Dữ liệu từ HIS đã được chuẩn hóa, sẵn sàng để trích xuất theo tiêu chí đề tài." },
-          { icon: "eyeSlash", status: "available", title: "Ẩn danh hóa", desc: "Loại bỏ thông tin định danh trước khi dữ liệu rời khỏi kho." },
-          { icon: "cpu", status: "available", title: "Machine Learning", desc: "Xây dựng và đánh giá mô hình trên dữ liệu thật của bệnh viện." },
-          { icon: "lock", status: "live", title: "Dữ liệu ở lại bệnh viện", desc: "Mọi phân tích chạy on-premise, dữ liệu không rời khỏi Việt Nam." },
+          { icon: "circleStack", title: "Kho dữ liệu lâm sàng", desc: "Dữ liệu từ HIS đã được chuẩn hóa, sẵn sàng để trích xuất theo tiêu chí đề tài." },
+          { icon: "eyeSlash", title: "Ẩn danh hóa", desc: "Loại bỏ thông tin định danh trước khi dữ liệu rời khỏi kho." },
+          { icon: "cpu", title: "Machine Learning", desc: "Xây dựng và đánh giá mô hình trên dữ liệu thật của bệnh viện." },
+          { icon: "lock", title: "Dữ liệu ở lại bệnh viện", desc: "Mọi phân tích chạy on-premise, dữ liệu không rời khỏi Việt Nam." },
         ],
       },
       {
@@ -251,10 +251,10 @@ export const research: LocalizedPage = {
         overline: "How Aurion helps",
         heading: "Clean data, ready for research",
         items: [
-          { icon: "circleStack", status: "live", title: "Clinical data repository", desc: "Standardised HIS data, ready to extract against a study's criteria." },
-          { icon: "eyeSlash", status: "available", title: "De-identification", desc: "Removes identifying information before data leaves the repository." },
-          { icon: "cpu", status: "available", title: "Machine learning", desc: "Build and evaluate models on the hospital's real data." },
-          { icon: "lock", status: "live", title: "Data stays in the hospital", desc: "All analysis runs on-premise; data never leaves Vietnam." },
+          { icon: "circleStack", title: "Clinical data repository", desc: "Standardised HIS data, ready to extract against a study's criteria." },
+          { icon: "eyeSlash", title: "De-identification", desc: "Removes identifying information before data leaves the repository." },
+          { icon: "cpu", title: "Machine learning", desc: "Build and evaluate models on the hospital's real data." },
+          { icon: "lock", title: "Data stays in the hospital", desc: "All analysis runs on-premise; data never leaves Vietnam." },
         ],
       },
       {
