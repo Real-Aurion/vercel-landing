@@ -173,6 +173,24 @@ export const security: LocalizedPage = {
           { icon: "shield", title: "AI chạy tại chỗ", desc: "Mô hình AI chạy trong hạ tầng bệnh viện, không gửi dữ liệu bệnh nhân ra ngoài." },
         ],
       },
+      {
+        type: "grid",
+        overline: "Tuân thủ pháp lý & tiêu chuẩn",
+        heading: "Xây dựng đúng theo quy định",
+        lead: "Aurion được thiết kế theo các yêu cầu kỹ thuật và tiêu chuẩn bảo mật y tế hiện hành.",
+        items: [
+          {
+            icon: "document",
+            title: "Công văn 365/TTYQG-GPQLCL-2025",
+            desc: "Yêu cầu kỹ thuật triển khai phần mềm hồ sơ bệnh án điện tử của Bộ Y tế Việt Nam.",
+          },
+          {
+            icon: "shield",
+            title: "HIPAA",
+            desc: "Tiêu chuẩn bảo vệ thông tin sức khỏe cá nhân của Hoa Kỳ — chuẩn mực quốc tế để Aurion đối chiếu trong thiết kế bảo mật.",
+          },
+        ],
+      },
     ],
   },
   en: {
@@ -195,6 +213,24 @@ export const security: LocalizedPage = {
           { icon: "document", title: "Access logs", desc: "Every access and action is recorded for review." },
           { icon: "eyeSlash", title: "De-identification", desc: "Identifying information is removed before data is used for research." },
           { icon: "shield", title: "AI runs locally", desc: "AI models run inside the hospital; patient data is never sent out." },
+        ],
+      },
+      {
+        type: "grid",
+        overline: "Regulatory compliance",
+        heading: "Built to the right standards",
+        lead: "Aurion is designed in line with current healthcare technical requirements and data security standards.",
+        items: [
+          {
+            icon: "document",
+            title: "Official Dispatch 365/TTYQG-GPQLCL-2025",
+            desc: "Vietnam Ministry of Health technical requirements for deploying electronic medical record (EMR) software.",
+          },
+          {
+            icon: "shield",
+            title: "HIPAA",
+            desc: "US standard for protecting personal health information — an international benchmark Aurion references in its security design.",
+          },
         ],
       },
     ],
