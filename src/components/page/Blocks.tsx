@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { Partners } from "@/components/sections/Partners";
 import { Visual } from "@/components/visuals/Visual";
-import type { Block, Status } from "@/content/pages/types";
+import type { Block } from "@/content/pages/types";
 import { isPublished } from "@/content/visibility";
 import type { Dictionary, Locale } from "@/dictionaries";
 import { localHref } from "@/lib/href";
@@ -39,11 +39,6 @@ function BlockBody({ block, lang, dict }: { block: Block; lang: Locale; dict: Di
 }
 
 
-function StatusBadge({ status, dict }: { status: Status; dict: Dictionary }) {
-  return <span className={styles.status} data-status={status}>{dict.status[status]}</span>;
-}
-
-
 function Points({ points }: { points: string[] }) {
   return (
     <ul className={styles.points}>
@@ -68,7 +63,6 @@ function Grid({ block, dict }: { block: BlockOf<"grid">; dict: Dictionary }) {
           <li key={item.title} id={item.id} className={styles.cell}>
             <div className={styles.cellTop}>
               <Icon name={item.icon} className={styles.cellIcon} />
-              {item.status && <StatusBadge status={item.status} dict={dict} />}
             </div>
             <h3 className={styles.cellTitle}>{item.title}</h3>
             <p className={styles.cellDesc}>{item.desc}</p>
@@ -87,7 +81,6 @@ function Split({ block, lang, dict }: { block: BlockOf<"split">; lang: Locale; d
       <div className={styles.splitText}>
         <div className={styles.splitMeta}>
           <span className="overline">{block.overline}</span>
-          {block.status && <StatusBadge status={block.status} dict={dict} />}
         </div>
         <h2 className={styles.heading}>{block.heading}</h2>
         <p className={styles.lead}>{block.body}</p>
