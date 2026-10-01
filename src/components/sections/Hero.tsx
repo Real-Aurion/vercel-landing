@@ -23,14 +23,6 @@ export function Hero({ lang, hero }: { lang: Locale; hero: Dictionary["hero"] })
           <Link className="button button--primary" href={localHref(lang, "/#contact")}>{hero.ctaSecondary}</Link>
           <Link className="button button--secondary" href={localHref(lang, "/#impact")}>{hero.cta}</Link>
         </div>
-        <ul className={styles.pills}>
-          {[hero.feature1, hero.feature2].map((feature) => (
-            <li key={feature.title} className={styles.pill}>
-              <span className={styles.pillTitle}>{feature.title}</span>
-              <span className={styles.pillDesc}>{feature.desc}</span>
-            </li>
-          ))}
-        </ul>
         <HeroShowcase lang={lang} />
       </div>
     </section>

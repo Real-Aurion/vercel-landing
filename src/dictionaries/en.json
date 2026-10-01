@@ -148,14 +148,6 @@
     "lead": "Aurion is building Asia-Pacific clinical intelligence infrastructure, transforming raw medical data into continuously learning AI engines that improve hospital operational efficiency, lab throughput, and research outcomes.",
     "cta": "See How It Works",
     "ctaSecondary": "Contact Us",
-    "feature1": {
-      "title": "Research",
-      "desc": "OCR & Machine Learning"
-    },
-    "feature2": {
-      "title": "Operation",
-      "desc": "AI Training & Automation"
-    }
   },
   "customers": {
     "label": "Trusted Partners",
